@@ -1,0 +1,75 @@
+43.0 APEX_CODE,DEBUG;APEX_PROFILING,FINEST;CALLOUT,INFO;DB,FINEST;NBA,NONE;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,FINER;WAVE,NONE;WORKFLOW,ERROR
+13:51:56.0 (515796)|USER_INFO|[EXTERNAL]|0051W000004MpfY|ahmir.mccage@world50.com.fcsb|Eastern Standard Time|GMT-04:00
+13:51:56.0 (582718)|EXECUTION_STARTED
+13:51:56.0 (589649)|CODE_UNIT_STARTED|[EXTERNAL]|01p0q0000019Up5|BCH_IIT_ControllerEditProductsTest.testBatch()
+13:51:56.0 (6560491)|SOQL_EXECUTE_BEGIN|[7]|Aggregations:0|SELECT id, name, Amount FROM opportunity WHERE Amount = 73000 LIMIT 150
+13:51:56.0 (6585350)|LIMIT_USAGE|[7]|SOQL|1|100
+13:51:56.0 (6604077)|LIMIT_USAGE|[7]|AGGS|0|300
+13:51:56.0 (10135003)|SOQL_EXECUTE_END|[7]|Rows:0
+13:51:56.0 (10150587)|LIMIT_USAGE|[7]|SOQL_ROWS|0|50000
+13:51:56.0 (10460697)|FATAL_ERROR|System.QueryException: List has no rows for assignment to SObject
+
+Class.BCH_IIT_ControllerEditProductsTest.testBatch: line 7, column 1
+13:51:56.0 (10477131)|FATAL_ERROR|System.QueryException: List has no rows for assignment to SObject
+
+Class.BCH_IIT_ControllerEditProductsTest.testBatch: line 7, column 1
+13:51:56.10 (10487548)|REFERENCED_OBJECT_LIST|ApexExecutionOverlayAction
+13:51:56.10 (10487548)|REFERENCED_OBJECT_LIST|ApexTestQueueItem
+13:51:56.10 (10487548)|REFERENCED_OBJECT_LIST|AsyncApexJob
+
+13:51:56.10 (10487548)|CUMULATIVE_LIMIT_USAGE
+13:51:56.10 (10487548)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 1 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+13:51:56.10 (10487548)|TOTAL_EMAIL_RECIPIENTS_QUEUED|0
+13:51:56.10 (10487548)|STATIC_VARIABLE_LIST|
+  int:BYTES:0
+  int:BYTES:0
+  char[]:DigitOnes:0
+  char[]:DigitTens:0
+  Boolean:FALSE:0
+  int:MAX_EXPONENT:0
+  double:MAX_VALUE:0
+  int:MAX_VALUE:0
+  int:MIN_EXPONENT:0
+  double:MIN_NORMAL:0
+  double:MIN_VALUE:0
+  int:MIN_VALUE:0
+  double:NEGATIVE_INFINITY:0
+  double:NaN:0
+  double:POSITIVE_INFINITY:0
+  int:SIZE:0
+  int:SIZE:0
+  Boolean:TRUE:0
+  String:_sfdcSuppressedCodeLocations:0
+  char[]:digits:0
+  long:serialVersionUID:0
+  long:serialVersionUID:0
+  long:serialVersionUID:0
+  int[]:sizeTable:0
+
+13:51:56.10 (10487548)|CUMULATIVE_LIMIT_USAGE_END
+
+13:51:56.0 (13462663)|CODE_UNIT_FINISHED|BCH_IIT_ControllerEditProductsTest.testBatch()
+13:51:56.0 (14574657)|EXECUTION_FINISHED
+13:52:02.349 (6349840183)|CUMULATIVE_PROFILING_BEGIN
+13:52:02.349 (6349840183)|CUMULATIVE_PROFILING|SOQL operations|
+Class.BCH_IIT_ControllerEditProductsTest.testBatch: line 7, column 1: [Select id, name, Amount FROM opportunity where Amount= 73000 LIMIT 150]: executed 1 time in 9 ms
+
+13:52:02.349 (6349840183)|CUMULATIVE_PROFILING|No profiling information for SOSL operations
+13:52:02.349 (6349840183)|CUMULATIVE_PROFILING|No profiling information for DML operations
+13:52:02.349 (6349840183)|CUMULATIVE_PROFILING|method invocations|
+External entry point: public static testMethod void testBatch(): executed 1 time in 9 ms
+
+13:52:02.349 (6349840183)|CUMULATIVE_PROFILING_END

@@ -1,0 +1,58 @@
+{
+    "BCH_IIT_ControllerEditProductsTest.cls": {
+        "createdById": "0051W000004MpfYQAS",
+        "createdByName": "Ahmir 1 McCage",
+        "createdDate": "2018-09-17T14:38:02.000Z",
+        "fileName": "unpackaged/classes/BCH_IIT_ControllerEditProductsTest.cls",
+        "fullName": "BCH_IIT_ControllerEditProductsTest",
+        "id": "01p0q0000019Up5AAE",
+        "lastModifiedById": "0051W000004MpfYQAS",
+        "lastModifiedByName": "Ahmir 1 McCage",
+        "lastModifiedDate": "2018-09-24T14:18:42.000Z",
+        "manageableState": "unmanaged",
+        "type": "ApexClass",
+        "mmState": "clean"
+    },
+    "BatchReport.cls": {
+        "createdById": "0051W000004MpfYQAS",
+        "createdByName": "Ahmir 1 McCage",
+        "createdDate": "2018-08-24T11:53:09.000Z",
+        "fileName": "unpackaged/classes/BatchReport.cls",
+        "fullName": "BatchReport",
+        "id": "01p0q0000013VPUAA2",
+        "lastModifiedById": "0051W000004MpfYQAS",
+        "lastModifiedByName": "Ahmir 1 McCage",
+        "lastModifiedDate": "2018-08-28T05:37:28.000Z",
+        "manageableState": "unmanaged",
+        "type": "ApexClass",
+        "mmState": "clean"
+    },
+    "batchreporttestclass.cls": {
+        "createdById": "0051W000004MpfYQAS",
+        "createdByName": "Ahmir 1 McCage",
+        "createdDate": "2018-08-27T05:11:35.000Z",
+        "fileName": "unpackaged/classes/batchreporttestclass.cls",
+        "fullName": "batchreporttestclass",
+        "id": "01p0q0000013Z5wAAE",
+        "lastModifiedById": "0051W000004MpfYQAS",
+        "lastModifiedByName": "Ahmir 1 McCage",
+        "lastModifiedDate": "2018-08-28T13:21:39.000Z",
+        "manageableState": "unmanaged",
+        "type": "ApexClass",
+        "mmState": "clean"
+    },
+    "BCH_IIT_ControllerEditProducts.cls": {
+        "createdById": "0050q000000tmA5AAI",
+        "createdByName": "Ahmir McCage",
+        "createdDate": "2018-09-16T08:47:56.000Z",
+        "fileName": "unpackaged/classes/BCH_IIT_ControllerEditProducts.cls",
+        "fullName": "BCH_IIT_ControllerEditProducts",
+        "id": "01p0q0000019PCtAAM",
+        "lastModifiedById": "0050q000000tmA5AAI",
+        "lastModifiedByName": "Ahmir McCage",
+        "lastModifiedDate": "2018-09-18T16:35:50.000Z",
+        "manageableState": "unmanaged",
+        "type": "ApexClass",
+        "mmState": "clean"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "projectName": "Batchreporttest",
+    "username": "ahmir.mccage@world50.com.fcsb",
+    "id": "dfa33800-ba86-11e8-afa1-6723523c6b47",
+    "namespace": "",
+    "orgType": "developer",
+    "loginUrl": "https://login.salesforce.com/",
+    "instanceUrl": "https://world50--FCSB.cs64.my.salesforce.com",
+    "workspace": "/Users/ahmir.mccage/Documents",
+    "subscription": [
+        "ApexClass",
+        "ApexComponent",
+        "AuraDefinitionBundle"
+    ]
+}

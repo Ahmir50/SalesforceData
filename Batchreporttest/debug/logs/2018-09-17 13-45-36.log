@@ -1,0 +1,106 @@
+43.0 APEX_CODE,DEBUG;APEX_PROFILING,FINEST;CALLOUT,INFO;DB,FINEST;NBA,NONE;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,FINER;WAVE,NONE;WORKFLOW,ERROR
+13:45:31.0 (419509)|USER_INFO|[EXTERNAL]|0050q000000tmA5|testuser@world50.com.fcsb|Eastern Standard Time|GMT-04:00
+13:45:31.0 (460160)|EXECUTION_STARTED
+13:45:31.0 (466633)|CODE_UNIT_STARTED|[EXTERNAL]|01p0q0000019PCt|BCH_IIT_ControllerEditProducts
+13:45:31.0 (24734944)|SOQL_EXECUTE_BEGIN|[21]|Aggregations:0|SELECT id, invoiceit_crmx__Unit_Price__c, invoiceit_crmx__Accounting_Code__c, Name, invoiceit_crmx__Opportunity_Rate_Plan__r.Name, invoiceit_crmx__Opportunity__r.name, invoiceit_crmx__Opportunity__r.Id, invoiceit_crmx__Opportunity__r.type, invoiceit_crmx__Opportunity__r.Member_Type__c, invoiceit_crmx__Opportunity__r.StageName, invoiceit_crmx__Opportunity__r.Proposed_Start_Date__c FROM invoiceit_crmx__Opportunity_Rate_Plan_Charge__c WHERE (invoiceit_crmx__Opportunity__r.type = 'Renewal' AND (invoiceit_crmx__Opportunity__r.StageName = 'Renewal Pending' OR invoiceit_crmx__Opportunity__r.StageName = 'Renewal Invoice Held') AND (invoiceit_crmx__Opportunity__r.Member_Type__c = 'Practitioner' OR invoiceit_crmx__Opportunity__r.Member_Type__c = 'Advising') AND invoiceit_crmx__Opportunity__r.Proposed_Start_Date__c <= :tmpVar1 AND invoiceit_crmx__Opportunity__r.Proposed_Start_Date__c >= :tmpVar2)
+13:45:35.351 (4351276870)|SOQL_EXECUTE_END|[21]|Rows:96
+13:45:35.351 (4355731730)|DML_BEGIN|[29]|Op:Update|Type:invoiceit_crmx__Opportunity_Rate_Plan_Charge__c|Rows:96
+13:45:35.442 (4442659246)|CUMULATIVE_LIMIT_USAGE
+13:45:35.442 (4442659246)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 1 out of 200
+  Number of query rows: 96 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 1 out of 150
+  Number of DML rows: 96 out of 10000
+  Maximum CPU time: 0 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 0
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+13:45:35.442 (4442659246)|CUMULATIVE_LIMIT_USAGE_END
+
+13:45:35.351 (4590415591)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:01I40000000VCCJ
+13:45:35.351 (4681243841)|CODE_UNIT_FINISHED|Workflow:01I40000000VCCJ
+13:45:35.351 (4684134372)|DML_END|[29]
+13:45:35.351 (4684296724)|USER_DEBUG|[30]|DEBUG|96
+13:45:35.351 (4685151181)|USER_DEBUG|[38]|DEBUG|96
+13:45:35.351 (4685234742)|USER_DEBUG|[39]|DEBUG|{0061W00000ogyzrQAA, 0061W00000ohY6bQAE, 0061W00000ohYRsQAM, 0061W00000ohYVkQAM, 0061W00000oheo1QAA, 0061W00000ohezNQAQ, 0061W00000ohf6zQAA, 0061W00000ohfHdQAI, 0061W00000ohmLkQAI, 0061W00000ohnPEQAY, ...}
+13:45:35.351 (4685576743)|SOQL_EXECUTE_BEGIN|[41]|Aggregations:0|SELECT id FROM Opportunity 
+13:45:35.351 (4713398113)|SOQL_EXECUTE_END|[41]|Rows:96
+13:45:35.742 (4742714789)|CUMULATIVE_LIMIT_USAGE
+13:45:35.742 (4742714789)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 200
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 0
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+13:45:35.742 (4742714789)|TOTAL_EMAIL_RECIPIENTS_QUEUED|0
+13:45:35.742 (4742714789)|STATIC_VARIABLE_LIST|
+  int:BYTES:0
+  int:BYTES:0
+  char[]:DigitOnes:0
+  char[]:DigitTens:0
+  Boolean:FALSE:0
+  int:MAX_EXPONENT:0
+  double:MAX_VALUE:0
+  int:MAX_VALUE:0
+  int:MIN_EXPONENT:0
+  double:MIN_NORMAL:0
+  double:MIN_VALUE:0
+  int:MIN_VALUE:0
+  double:NEGATIVE_INFINITY:0
+  double:NaN:0
+  double:POSITIVE_INFINITY:0
+  int:SIZE:0
+  int:SIZE:0
+  Boolean:TRUE:0
+  String:__sfdcParameterizedTypes:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  char[]:digits:0
+  long:serialVersionUID:0
+  long:serialVersionUID:0
+  long:serialVersionUID:0
+  int[]:sizeTable:0
+
+13:45:35.742 (4742714789)|CUMULATIVE_LIMIT_USAGE_END
+
+13:45:35.351 (4742874823)|CODE_UNIT_FINISHED|BCH_IIT_ControllerEditProducts
+13:45:35.351 (4743709854)|EXECUTION_FINISHED
+13:45:35.756 (4756891595)|CUMULATIVE_PROFILING_BEGIN
+13:45:35.756 (4756891595)|CUMULATIVE_PROFILING|SOQL operations|
+Class.BCH_IIT_ControllerEditProducts.start: line 21, column 1: [ Select  id, invoiceit_crmx__Unit_Price__c, invoiceit_crmx__Accounting_Code__c,Name,invoiceit_crmx__Opportunity_Rate_Plan__r.Name, invoiceit_crmx__Opportunity__r.name, invoiceit_crmx__Opportunity__r.Id, invoiceit_crmx__Opportunity__r.type,invoiceit_crmx__Opportunity__r.Member_Type__c, invoiceit_crmx__Opportunity__r.StageName,invoiceit_crmx__Opportunity__r.Proposed_Start_Date__c
+                                                                           FROM invoiceit_crmx__Opportunity_Rate_Plan_Charge__c  WHERE invoiceit_crmx__Opportunity__r.type='Renewal' and (invoiceit_crmx__Opportunity__r.StageName='Renewal Pending' or invoiceit_crmx__Opportunity__r.StageName='Renewal Invoice Held' )and (invoiceit_crmx__Opportunity__r.Member_Type__c='Practitioner'   or invoiceit_crmx__Opportunity__r.Member_Type__c='Advising')  and invoiceit_crmx__Opportunity__r.Proposed_Start_Date__c <= :bc1.Date_2__c and invoiceit_crmx__Opportunity__r.Proposed_Start_Date__c >= :bc1.Date_1__c ]: executed 1 time in 4335 ms
+Class.BCH_IIT_ControllerEditProducts.start: line 41, column 1: com.salesforce.api.Database.getQueryLocator(List<Opportunity>): executed 1 time in 28 ms
+
+13:45:35.756 (4756891595)|CUMULATIVE_PROFILING|No profiling information for SOSL operations
+13:45:35.756 (4756891595)|CUMULATIVE_PROFILING|DML operations|
+Class.BCH_IIT_ControllerEditProducts.start: line 29, column 1: Update: List<invoiceit_crmx__Opportunity_Rate_Plan_Charge__c>: executed 1 time in 328 ms
+
+13:45:35.756 (4756891595)|CUMULATIVE_PROFILING|method invocations|
+External entry point: global Database.QueryLocator start(Database.BatchableContext): executed 1 time in 4696 ms
+Class.BCH_IIT_ControllerEditProducts.start: line 32, column 1: public Set<Id>(Integer): executed 1 time in 0 ms
+Class.BCH_IIT_ControllerEditProducts.start: line 34, column 1: global public System.Iterator iterator(): executed 98 times in 0 ms
+Class.BCH_IIT_ControllerEditProducts.start: line 35, column 1: global public Boolean add(Object): executed 96 times in 0 ms
+Class.BCH_IIT_ControllerEditProducts.start: line 38, column 1: global public Integer size(): executed 2 times in 0 ms
+Class.BCH_IIT_ControllerEditProducts.start: line 39, column 1: global public static void debug(ANY): executed 1 time in 0 ms
+Class.BCH_IIT_ControllerEditProducts.start: line 24, column 1: global public System.Iterator iterator(): executed 98 times in 0 ms
+Class.BCH_IIT_ControllerEditProducts.start: line 26, column 1: public Decimal add(Decimal): executed 96 times in 0 ms
+Class.BCH_IIT_ControllerEditProducts.start: line 30, column 1: global public Integer size(): executed 2 times in 0 ms
+
+13:45:35.756 (4756891595)|CUMULATIVE_PROFILING_END

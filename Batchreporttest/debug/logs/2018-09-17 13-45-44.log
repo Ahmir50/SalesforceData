@@ -1,0 +1,2351 @@
+43.0 APEX_CODE,DEBUG;APEX_PROFILING,FINEST;CALLOUT,INFO;DB,FINEST;NBA,NONE;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,FINER;WAVE,NONE;WORKFLOW,ERROR
+13:45:42.0 (75301)|USER_INFO|[EXTERNAL]|0050q000000tmA5|testuser@world50.com.fcsb|Eastern Standard Time|GMT-04:00
+13:45:42.0 (122052)|EXECUTION_STARTED
+13:45:42.0 (128652)|CODE_UNIT_STARTED|[EXTERNAL]|01p0q0000019PCt|BCH_IIT_ControllerEditProducts
+13:45:42.0 (47736069)|SOQL_EXECUTE_BEGIN|[12]|Aggregations:0|SELECT invoiceit_crmx__Sub_Total__c, invoiceit_crmx__Total__c FROM Opportunity WHERE Id = :tmpVar1
+13:45:42.0 (52867078)|SOQL_EXECUTE_END|[12]|Rows:1
+13:45:42.0 (55511718)|SOQL_EXECUTE_BEGIN|[16]|Aggregations:0|SELECT Discount_Reason__c, invoiceit_crmx__Accounting_Code__c, invoiceit_crmx__Charge_Code__c, invoiceit_crmx__Committed_Quantity__c, invoiceit_crmx__Cost_Price__c, invoiceit_crmx__Cost__c, invoiceit_crmx__CurrencyL__c, invoiceit_crmx__Discount_Percent__c, invoiceit_crmx__Discount_Type__c, invoiceit_crmx__Discount_Value__c, invoiceit_crmx__Is_Product_Editable__c, invoiceit_crmx__Max_Customer_Spend__c, invoiceit_crmx__Min_Customer_Spend__c, invoiceit_crmx__Net_Total__c, invoiceit_crmx__Opportunity_Rate_Plan__c, invoiceit_crmx__Opportunity__c, invoiceit_crmx__Percentage_of_other_Charges__c, invoiceit_crmx__Price_Format__c, invoiceit_crmx__Price_Type__c, invoiceit_crmx__Price__c, invoiceit_crmx__Product_Bundle_Line__c, invoiceit_crmx__Product_Charge_Category__c, invoiceit_crmx__Product_Rate_Plan_Charge__c, invoiceit_crmx__Profit__c, invoiceit_crmx__Quantity__c, invoiceit_crmx__Row_Total__c, invoiceit_crmx__Sequence_No__c, invoiceit_crmx__Status__c, invoiceit_crmx__Tax_Code__c, invoiceit_crmx__Tax_Percentage__c, invoiceit_crmx__Tax__c, invoiceit_crmx__Unit_Of_Measurement__c, invoiceit_crmx__Unit_Price__c, invoiceit_crmx__VAT_Percentage__c, invoiceit_crmx__VAT__c, IsDeleted, Name, Type__c, invoiceit_crmx__Opportunity_Rate_Plan__r.invoiceit_crmx__Opportunity_Product__r.Name, invoiceit_crmx__Opportunity_Rate_Plan__r.invoiceit_crmx__Opportunity_Product__r.invoiceit_crmx__Description__c, invoiceit_crmx__CurrencyL__r.invoiceit_s__Currency_Symbol__c, invoiceit_crmx__Product_Rate_Plan_Charge__r.invoiceit_s__Unit_Price__c, Notes__c, Granted_By_User__c FROM invoiceit_crmx__Opportunity_Rate_Plan_Charge__c WHERE invoiceit_crmx__Opportunity_Rate_Plan__r.invoiceit_crmx__Opportunity_Product__r.invoiceit_crmx__Opportunity__c = :tmpVar1
+13:45:42.0 (75303624)|SOQL_EXECUTE_END|[16]|Rows:1
+13:45:42.0 (76902916)|USER_DEBUG|[51]|DEBUG|charge.invoiceit_crmx__Discount_Value__c 0.00
+13:45:42.0 (76957213)|USER_DEBUG|[52]|DEBUG|charge.Discount_Reason__c null
+13:45:42.0 (77857506)|USER_DEBUG|[51]|DEBUG|charge.invoiceit_crmx__Discount_Value__c 0.00
+13:45:42.0 (77871150)|USER_DEBUG|[52]|DEBUG|charge.Discount_Reason__c null
+13:45:42.0 (78244433)|DML_BEGIN|[131]|Op:Update|Type:invoiceit_crmx__Opportunity_Rate_Plan_Charge__c|Rows:1
+13:45:42.93 (93570583)|CUMULATIVE_LIMIT_USAGE
+13:45:42.93 (93570583)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 2 out of 200
+  Number of query rows: 2 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 1 out of 150
+  Number of DML rows: 1 out of 10000
+  Maximum CPU time: 0 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 0
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+13:45:42.93 (93570583)|CUMULATIVE_LIMIT_USAGE_END
+
+13:45:42.0 (109002935)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:01I40000000VCCJ
+13:45:42.0 (133259281)|CODE_UNIT_FINISHED|Workflow:01I40000000VCCJ
+13:45:42.0 (139212372)|DML_END|[131]
+13:45:42.0 (139374619)|DML_BEGIN|[133]|Op:Update|Type:Opportunity|Rows:1
+13:45:42.0 (183853686)|CODE_UNIT_STARTED|[EXTERNAL]|01q40000000CuN5|Opportunities on Opportunity trigger event BeforeUpdate|__sfdc_trigger/Opportunities
+13:45:42.0 (199644400)|SYSTEM_MODE_ENTER|false
+13:45:42.0 (199658474)|SYSTEM_MODE_EXIT|false
+13:45:42.0 (199727436)|SYSTEM_MODE_ENTER|false
+13:45:42.0 (199956730)|SYSTEM_MODE_EXIT|false
+13:45:42.0 (200552619)|SOQL_EXECUTE_BEGIN|[69]|Aggregations:1|SELECT Id, Renewal_Opps__c, Renewal_Opp__c, (SELECT Id, Transferred_From_Type__c, CloseDate FROM Opportunities1__r ORDER BY CloseDate DESC NULLS FIRST) FROM Opportunity WHERE Id = :tmpVar1
+13:45:42.0 (206696727)|SOQL_EXECUTE_END|[69]|Rows:1
+13:45:42.207 (207160548)|CUMULATIVE_LIMIT_USAGE
+13:45:42.207 (207160548)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 3 out of 200
+  Number of query rows: 3 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 2 out of 150
+  Number of DML rows: 2 out of 10000
+  Maximum CPU time: 0 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 0
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+13:45:42.207 (207160548)|TOTAL_EMAIL_RECIPIENTS_QUEUED|0
+13:45:42.207 (207160548)|STATIC_VARIABLE_LIST|
+  int:BYTES:0
+  int:BYTES:0
+  char[]:DigitOnes:0
+  char[]:DigitTens:0
+  Boolean:FALSE:0
+  int:MAX_EXPONENT:0
+  double:MAX_VALUE:0
+  int:MAX_VALUE:0
+  int:MIN_EXPONENT:0
+  double:MIN_NORMAL:0
+  double:MIN_VALUE:0
+  int:MIN_VALUE:0
+  double:NEGATIVE_INFINITY:0
+  double:NaN:0
+  double:POSITIVE_INFINITY:0
+  int:SIZE:0
+  int:SIZE:0
+  Boolean:TRUE:0
+  String:__sfdcParameterizedTypes:0
+  String:__sfdcProperties:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  char[]:digits:0
+  long:serialVersionUID:0
+  long:serialVersionUID:0
+  long:serialVersionUID:0
+  int[]:sizeTable:0
+
+13:45:42.207 (207160548)|CUMULATIVE_LIMIT_USAGE_END
+
+13:45:42.0 (208753832)|CODE_UNIT_FINISHED|Opportunities on Opportunity trigger event BeforeUpdate|__sfdc_trigger/Opportunities
+13:45:42.0 (210632067)|CODE_UNIT_STARTED|[EXTERNAL]|01q40000000HBDL|IIT_TriggerOnOpportunity on Opportunity trigger event BeforeUpdate|__sfdc_trigger/IIT_TriggerOnOpportunity
+13:45:42.0 (219146558)|USER_DEBUG|[29]|DEBUG|oppty.Proposed_Term__c null
+13:45:42.0 (219196481)|USER_DEBUG|[30]|DEBUG|oppty.Proposed_Term__c null
+13:45:42.219 (219341349)|CUMULATIVE_LIMIT_USAGE
+13:45:42.219 (219341349)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 3 out of 200
+  Number of query rows: 3 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 2 out of 150
+  Number of DML rows: 2 out of 10000
+  Maximum CPU time: 0 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 0
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+13:45:42.219 (219341349)|TOTAL_EMAIL_RECIPIENTS_QUEUED|0
+13:45:42.219 (219341349)|STATIC_VARIABLE_LIST|
+  int:BYTES:0
+  int:BYTES:0
+  char[]:DigitOnes:0
+  char[]:DigitTens:0
+  Boolean:FALSE:0
+  int:MAX_EXPONENT:0
+  double:MAX_VALUE:0
+  int:MAX_VALUE:0
+  int:MIN_EXPONENT:0
+  double:MIN_NORMAL:0
+  double:MIN_VALUE:0
+  int:MIN_VALUE:0
+  double:NEGATIVE_INFINITY:0
+  double:NaN:0
+  double:POSITIVE_INFINITY:0
+  int:SIZE:0
+  int:SIZE:0
+  Boolean:TRUE:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcParameterizedTypes:0
+  String:__sfdcProperties:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  Boolean:_static_isApprovalProcess:0
+  Boolean:_static_isExecute:0
+  char[]:digits:0
+  long:serialVersionUID:0
+  long:serialVersionUID:0
+  long:serialVersionUID:0
+  int[]:sizeTable:0
+
+13:45:42.219 (219341349)|CUMULATIVE_LIMIT_USAGE_END
+
+13:45:42.0 (220431405)|CODE_UNIT_FINISHED|IIT_TriggerOnOpportunity on Opportunity trigger event BeforeUpdate|__sfdc_trigger/IIT_TriggerOnOpportunity
+13:45:42.0 (240919538)|CODE_UNIT_STARTED|[EXTERNAL]|Validation:Opportunity:0061W00000ogyzr
+13:45:42.0 (240938211)|VALIDATION_RULE|03d400000004lLC|Campaign_Required_for_Source_Gathering
+13:45:42.0 (241174083)|VALIDATION_FORMULA|AND(
+ ISPICKVAL(Type ,"New"),
+ ISPICKVAL ( Opportunity_Source__c, "Gathering"), 
+OR(
+ISBLANK( CampaignId ),
+CampaignId = '70140000000gCnU',
+CampaignId = '70140000000gCnf',
+CampaignId = '70140000000gCnk')
+)|Type=Renewal , CampaignId=null , Opportunity_Source__c=null
+13:45:42.0 (241185913)|VALIDATION_PASS
+13:45:42.0 (241188517)|VALIDATION_RULE|03d400000000POf|Can_not_change_close_date
+13:45:42.0 (246838583)|VALIDATION_FORMULA|AND( 
+$Profile.Name != "W50 Sys Admin", 
+$Profile.Name != "W50 Finance", 
+$Profile.Name != "W50 Advanced",
+NOT($Setup.bypass_validations__c.Bypass_Validation_Rules__c), 
+contains($RecordType.Name , "Membership"), 
+IsClosed, 
+PRIORVALUE( CloseDate ) <> CloseDate,
+PRIORVALUE(IsClosed)
+)|$RecordType.Name=Renewal Membership , $Profile.Name=W50 Sys Admin , $Setup.bypass_validations__c.Bypass_Validation_Rules__c=null , IsClosed=0 , CloseDate=2018-10-06 00:00:00
+13:45:42.0 (246858779)|VALIDATION_PASS
+13:45:42.0 (246861863)|VALIDATION_RULE|03d1W000000XdYB|Invoice_Held_Reason_Required
+13:45:42.0 (246960485)|VALIDATION_FORMULA|ISPICKVAL(StageName, "Renewal Invoice Held") &&
+ISBLANK(Held_Reason__c)|StageName=Renewal Pending , Held_Reason__c=null
+13:45:42.0 (246969130)|VALIDATION_PASS
+13:45:42.0 (246971476)|VALIDATION_RULE|03d40000000PYLZ|Invoicing_Details_Required_Closed_Won
+13:45:42.0 (247058524)|VALIDATION_FORMULA|ISPICKVAL(StageName, "Deal Closed - Won") && 
+ISBLANK ( Invoicing_Details__c )&&
+ Legacy_Data__c = FALSE|Invoicing_Details__c=null , StageName=Renewal Pending , Legacy_Data__c=0
+13:45:42.0 (247066909)|VALIDATION_PASS
+13:45:42.0 (247068986)|VALIDATION_RULE|03d40000000PYH3|Invoicing_Details_Required_Renewal_Confi
+13:45:42.0 (247138004)|VALIDATION_FORMULA|ISPICKVAL(StageName, "Renewal Confirmed") && 
+ISBLANK ( Invoicing_Details__c )&&
+ Legacy_Data__c = FALSE|Invoicing_Details__c=null , StageName=Renewal Pending , Legacy_Data__c=0
+13:45:42.0 (247145528)|VALIDATION_PASS
+13:45:42.0 (247148253)|VALIDATION_RULE|03d40000000PYPl|Low_Forecast_requires_At_Risk
+13:45:42.0 (247283037)|VALIDATION_FORMULA|AND(
+  At_Risk__c = FALSE,
+  NOT(ISPICKVAL(Type, "World 50 Lab")),
+  OR(
+  ISPICKVAL(Renewal_Forecast__c, "0%"),
+  ISPICKVAL(Renewal_Forecast__c, "20%"),
+  ISPICKVAL(Renewal_Forecast__c, "40%")
+ )
+)|Type=Renewal , At_Risk__c=0 , Renewal_Forecast__c=80%
+13:45:42.0 (247291708)|VALIDATION_PASS
+13:45:42.0 (247293636)|VALIDATION_RULE|03d400000000PHM|Membership_End_Date_on_last_of_month
+13:45:42.0 (247444073)|VALIDATION_FORMULA|Term_End_Date__c <> DATE( 
+YEAR(Term_End_Date__c), 
+MONTH(Term_End_Date__c), 
+CASE( MONTH(Term_End_Date__c), 
+1, 31, 
+2, IF( MOD( YEAR(Term_End_Date__c), 4) = 0, 29, 28), 
+3, 31, 
+4, 30, 
+5, 31, 
+6, 30, 
+7, 31, 
+8, 31, 
+9, 30, 
+10, 31, 
+11, 30, 
+12, 31, 
+0 
+) 
+)|Term_End_Date__c=null
+13:45:42.0 (247452873)|VALIDATION_PASS
+13:45:42.0 (247455098)|VALIDATION_RULE|03d400000000PHN|Membership_Start_Date_on_first_of_month
+13:45:42.0 (247519906)|VALIDATION_FORMULA|Day(Term_Start_Date__c) <> 1 &&
+NOT( ISPICKVAL(Type, 'Special Program'))|Type=Renewal , Term_Start_Date__c=null
+13:45:42.0 (247526832)|VALIDATION_PASS
+13:45:42.0 (247528656)|VALIDATION_RULE|03d400000000JjT|Opportunity_Contact_Required
+13:45:42.0 (247892682)|VALIDATION_FORMULA|AND (
+contains($RecordType.Name , "Membership"),
+OR(create_date_date__c >  DATE(2012,01,01), isnew()) ,
+OR (
+ISPICKVAL ( Opportunity_Source__c, "Advising Member Referral"),
+ISPICKVAL ( Opportunity_Source__c, "Advisor Referral"),
+ISPICKVAL ( Opportunity_Source__c, "Alumni Referral"),
+ISPICKVAL ( Opportunity_Source__c, "Member Referral"),
+ISPICKVAL ( Opportunity_Source__c, "Member Transfer"),
+ISPICKVAL ( Opportunity_Source__c, "Prospect/Suspect Referral"),
+ISPICKVAL ( Opportunity_Source__c, "World 50 Relationship")
+),
+ISBLANK ( Opportunity_Source_Contact__c )
+)|$RecordType.Name=Renewal Membership , Opportunity_Source__c=null , Opportunity_Source_Contact__c=null , create_date_date__c=2017-09-29 13:46:19
+13:45:42.0 (247908245)|VALIDATION_PASS
+13:45:42.0 (247910621)|VALIDATION_RULE|03d400000004lUY|Primary_Campaign_Required_MD_LabsOpps
+13:45:42.0 (248010759)|VALIDATION_FORMULA|ISPICKVAL(Opportunity_Source__c, "Prospect") && 
+ISBLANK ( CampaignId )&& 
+Legacy_Data__c = FALSE|CampaignId=null , Opportunity_Source__c=null , Legacy_Data__c=0
+13:45:42.0 (248020041)|VALIDATION_PASS
+13:45:42.0 (248022016)|VALIDATION_RULE|03d400000000PHP|Proposed_Start_Date_on_first_of_month
+13:45:42.0 (248080680)|VALIDATION_FORMULA|Day( Proposed_Start_Date__c ) <> 1|Proposed_Start_Date__c=2018-12-01 00:00:00
+13:45:42.0 (248087183)|VALIDATION_PASS
+13:45:42.0 (248089210)|VALIDATION_RULE|03d40000000PYGA|Terms_over_12_months_requires_reason
+13:45:42.0 (248190545)|VALIDATION_FORMULA|AND
+(
+Proposed_Term__c > 12 ,OR(ISBLANK( Extended_Term_Granted_by__c ),
+ISBLANK( TEXT(Reason_for_Extended_Term__c ))
+))|Extended_Term_Granted_by__c=null , Proposed_Term__c=null , Reason_for_Extended_Term__c=null
+13:45:42.0 (248198150)|VALIDATION_PASS
+13:45:42.0 (248200453)|VALIDATION_RULE|03d400000000PNh|Term_End_Greater_then_Term_Start
+13:45:42.0 (248263249)|VALIDATION_FORMULA|AND(
+not(isblank(Term_End_Date__c)),
+Term_End_Date__c <  Term_Start_Date__c
+)|Term_Start_Date__c=null , Term_End_Date__c=null
+13:45:42.0 (248269932)|VALIDATION_PASS
+13:45:42.0 (248271782)|VALIDATION_RULE|03d400000000FMC|Won_Lost_Explanation_Required
+13:45:42.0 (248531083)|VALIDATION_FORMULA|AND (
+OR(create_date_date__c >  DATE(2013,01,01), isnew()),
+contains($RecordType.Name , "Membership"),
+OR(text(ForecastCategoryName) = "Best Case",  text(ForecastCategoryName) ="Omitted"),
+OR(TEXT(StageName)!= "Non-Paying Renewal Pending"),
+isblank(Text(Transferred_From_Type__c)),
+ISBLANK(Won_Lost_Reason_Explanation__c )
+)|$RecordType.Name=Renewal Membership , Won_Lost_Reason_Explanation__c=null , StageName=Renewal Pending , Transferred_From_Type__c=null , ForecastCategoryName=Pipeline , create_date_date__c=2017-09-29 13:46:19
+13:45:42.0 (248543205)|VALIDATION_PASS
+13:45:42.0 (248545491)|VALIDATION_RULE|03d1W000000XdYQ|Won_Lost_Influencer_Required
+13:45:42.0 (248630895)|VALIDATION_FORMULA|ISPICKVAL(Won_Lost_Reason__c , "Member Referral") && ISBLANK(Won_Lost_Influencer__c)|Won_Lost_Influencer__c=null , Won_Lost_Reason__c=null
+13:45:42.0 (248638715)|VALIDATION_PASS
+13:45:42.0 (248640721)|VALIDATION_RULE|03d40000000PYHI|Cannot_Change_Close_Date_After_Approval
+13:45:42.0 (248834128)|VALIDATION_FORMULA|ISCHANGED( CloseDate ) && 
+ISPICKVAL ( Approval_Status__c , "Approved") &&
+NOT( $Setup.bypass_validations__c.Bypass_Validation_Rules__c )|Approval_Status__c=null , $Setup.bypass_validations__c.Bypass_Validation_Rules__c=null , CloseDate=2018-10-06 00:00:00
+13:45:42.0 (248844316)|VALIDATION_PASS
+13:45:42.0 (248846324)|VALIDATION_RULE|03d400000000PHL|Cant_Transfer_an_opportunity_twice
+13:45:42.0 (248910176)|VALIDATION_FORMULA|Transferred_To_Date__c >  Transferred_From_Date__c|Transferred_From_Date__c=null , Transferred_To_Date__c=null
+13:45:42.0 (248917390)|VALIDATION_PASS
+13:45:42.0 (248919436)|VALIDATION_RULE|03d400000000FLx|Finance_Add_Term_Fields
+13:45:42.0 (249175287)|VALIDATION_FORMULA|AND( 
+contains($RecordType.Name , "Membership"), 
+OR( text( StageName ) = "Renewal Invoice Created",
+         text(StageName) = "New Member Invoice Created", 
+         AND($RecordType.Name  = "Renwal Membership",
+                   text (ForecastCategoryName) = "Closed"),
+         AND($RecordType.Name  = "Renwal Membership",
+                  text (ForecastCategoryName) = "Best Case")
+       ),
+OR(isblank(Term_Amount__c), 
+       isblank(Term_Start_Date__c), 
+       isblank (Term_End_Date__c) ,
+       not( HasOpportunityLineItem )
+) 
+)|$RecordType.Name=Renewal Membership , HasOpportunityLineItem=0 , StageName=Renewal Pending , Term_Start_Date__c=null , Term_Amount__c=81000 , Term_End_Date__c=null , ForecastCategoryName=Pipeline
+13:45:42.0 (249191042)|VALIDATION_PASS
+13:45:42.0 (249193598)|VALIDATION_RULE|03d40000000PYEU|IIT_restrict_updationof_wsgroup
+13:45:42.0 (249440247)|VALIDATION_FORMULA|IF(!isnew()  && 
+NOT( $Setup.bypass_validations__c.Bypass_Validation_Rules__c ) &&
+(OR(ISPICKVAL(StageName, 'Deal Closed - Won'),
+    ISPICKVAL(StageName, 'Invoice Sent'))) &&  
+    ISCHANGED( W50_Group__c) , true, false)|StageName=Renewal Pending , $Setup.bypass_validations__c.Bypass_Validation_Rules__c=null , W50_Group__c=a0540000002LsHg
+13:45:42.0 (249451476)|VALIDATION_PASS
+13:45:42.0 (249453770)|VALIDATION_RULE|03d40000000PYET|IIT_Terms_And_NoOfinstallments
+13:45:42.0 (249595803)|VALIDATION_FORMULA|IF(text(Type) = "Renewal" && text(StageName) = "Renewal Confirmed" &&  OR( 
+isblank(Proposed_Term__c ), 
+isblank(Proposed_Start_Date__c), 
+isblank(of_Invoices__c ) 
+) , true, false)|Type=Renewal , StageName=Renewal Pending , Proposed_Term__c=null , Proposed_Start_Date__c=2018-12-01 00:00:00 , of_Invoices__c=1
+13:45:42.0 (249605462)|VALIDATION_PASS
+13:45:42.0 (249607638)|VALIDATION_RULE|03d400000000PHO|No_Change_Renewal_Date_on_Renewal_Opp
+13:45:42.0 (249825224)|VALIDATION_FORMULA|AND(
+$Profile.Name <>  "W50 Sys Admin",
+$Profile.Name <>  "W50 Finance",
+NOT( $Setup.bypass_validations__c.Bypass_Validation_Rules__c ),
+PRIORVALUE( Proposed_Start_Date__c ) <>  Proposed_Start_Date__c,
+not(isblank(PRIORVALUE( Proposed_Start_Date__c ))),
+$RecordType.Name  = "Renewal Membership"
+)|$RecordType.Name=Renewal Membership , $Profile.Name=W50 Sys Admin , $Setup.bypass_validations__c.Bypass_Validation_Rules__c=null , Proposed_Start_Date__c=2018-12-01 00:00:00
+13:45:42.0 (249837392)|VALIDATION_PASS
+13:45:42.0 (249840029)|VALIDATION_RULE|03d400000000POp|Proposed_Fields_Required
+13:45:42.0 (250006088)|VALIDATION_FORMULA|AND(
+contains($RecordType.Name , "Membership"),
+OR( text( StageName ) = "Renewal Confirmed", text(StageName) = "Deal Closed - Won"),
+OR(isblank(Term_Amount__c),
+       isblank(Proposed_Term__c ),
+       isblank(Proposed_Start_Date__c),
+       isblank(of_Invoices__c ),
+isblank(Won_Lost_Reason_Explanation__c)
+        )
+)|$RecordType.Name=Renewal Membership , Won_Lost_Reason_Explanation__c=null , StageName=Renewal Pending , Proposed_Term__c=null , Term_Amount__c=81000 , Proposed_Start_Date__c=2018-12-01 00:00:00 , of_Invoices__c=1
+13:45:42.0 (250019298)|VALIDATION_PASS
+13:45:42.0 (250021692)|VALIDATION_RULE|03d400000004lUZ|Start_Date_Explanation_Required_Labs
+13:45:42.0 (250111355)|VALIDATION_FORMULA|AND(
+ISPICKVAL(Type, "World 50 Lab"),
+( text( StageName ) = "Closed Won"),
+OR( isblank(Proposed_Start_Date__c),
+isblank(Won_Lost_Reason_Explanation__c)
+        )
+)|Type=Renewal , Won_Lost_Reason_Explanation__c=null , StageName=Renewal Pending , Proposed_Start_Date__c=2018-12-01 00:00:00
+13:45:42.0 (250119253)|VALIDATION_PASS
+13:45:42.0 (250121040)|VALIDATION_RULE|03d400000004lUa|W50Lab_Campaign_Required_to_Close_Opp
+13:45:42.0 (250237691)|VALIDATION_FORMULA|ISPICKVAL(StageName, "Closed Won") && ISPICKVAL(Type, "World 50 Lab") &&
+OR(ISBLANK ( World_50_Lab_Campaign__c ), 
+ISBLANK ( Topic_s__c ),
+ISBLANK ( Invoicing_Details__c )) &&
+Legacy_Data__c = FALSE|Type=Renewal , Invoicing_Details__c=null , StageName=Renewal Pending , Topic_s__c=null , World_50_Lab_Campaign__c=null , Legacy_Data__c=0
+13:45:42.0 (250250889)|VALIDATION_PASS
+13:45:42.0 (250373450)|CODE_UNIT_FINISHED|Validation:Opportunity:0061W00000ogyzr
+13:45:42.299 (299769201)|CUMULATIVE_LIMIT_USAGE
+13:45:42.299 (299769201)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 3 out of 200
+  Number of query rows: 3 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 2 out of 150
+  Number of DML rows: 2 out of 10000
+  Maximum CPU time: 0 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 0
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+13:45:42.299 (299769201)|CUMULATIVE_LIMIT_USAGE_END
+
+13:45:42.0 (303856501)|CODE_UNIT_STARTED|[EXTERNAL]|01q400000004ay3|RHX_Opportunity on Opportunity trigger event AfterUpdate|__sfdc_trigger/RHX_Opportunity
+13:45:42.0 (430629178)|SOQL_EXECUTE_BEGIN|[11]|Aggregations:0|SELECT NamespacePrefix FROM Organization
+13:45:42.0 (434572055)|SOQL_EXECUTE_END|[11]|Rows:1
+13:45:42.0 (440230509)|SOQL_EXECUTE_BEGIN|[632]|Aggregations:0|SELECT Name, JSON__c, XRef__c, Condition__c, Field__c, Logic__c FROM Filter__c 
+13:45:42.0 (452999835)|SOQL_EXECUTE_END|[632]|Rows:5
+13:45:42.0 (688899686)|SOQL_EXECUTE_BEGIN|[40]|Aggregations:0|SELECT Id, Renewal_Opp__c, Person__c, AccountId FROM Opportunity WHERE Renewal_Opp__c IN :scope
+13:45:42.0 (696433062)|SOQL_EXECUTE_END|[40]|Rows:1
+13:45:42.0 (696875461)|SOQL_EXECUTE_BEGIN|[40]|Aggregations:0|SELECT Id, Renewal_Opp__c, Person__c, AccountId FROM Opportunity WHERE Renewed_From__c IN :scope
+13:45:42.0 (701796510)|SOQL_EXECUTE_END|[40]|Rows:0
+13:45:42.0 (702183856)|SOQL_EXECUTE_BEGIN|[40]|Aggregations:0|SELECT Id, Renewal_Opp__c, Person__c, AccountId FROM Opportunity WHERE Transferred_From_Opp__c IN :scope
+13:45:42.0 (706778283)|SOQL_EXECUTE_END|[40]|Rows:0
+13:45:42.0 (707351279)|SOQL_EXECUTE_BEGIN|[40]|Aggregations:0|SELECT Id, Renewal_Opp__c, Person__c, AccountId FROM Opportunity WHERE Transferred_To_Opp__c IN :scope
+13:45:42.0 (713401853)|SOQL_EXECUTE_END|[40]|Rows:0
+13:45:43.465 (1465714933)|SOQL_EXECUTE_BEGIN|[40]|Aggregations:0| SELECT Opportunity.Renewal_Opp_Owner__c FROM Opportunity WHERE  isDeleted = false AND Id IN :scope  LIMIT 50000
+13:45:43.465 (1473141076)|SOQL_EXECUTE_END|[40]|Rows:1
+13:45:43.465 (1476497722)|SOQL_EXECUTE_BEGIN|[40]|Aggregations:0| SELECT Contact.Total_of_Renewals__c , Contact.Current_Opp_ID__c , Contact.Membership_Declined_Date__c , Contact.Current_Opp_Stage__c , Contact.Upcoming_Renewal_Date__c FROM Contact WHERE  isDeleted = false AND Id IN :scope  LIMIT 50000
+13:45:43.465 (1486975196)|SOQL_EXECUTE_END|[40]|Rows:1
+13:45:43.465 (1489762998)|SOQL_EXECUTE_BEGIN|[40]|Aggregations:0| SELECT Account.Average_Renewal_Forecast__c FROM Account WHERE  isDeleted = false AND Id IN :scope  LIMIT 50000
+13:45:43.465 (1499544660)|SOQL_EXECUTE_END|[40]|Rows:1
+13:45:43.465 (1523085694)|SOQL_EXECUTE_BEGIN|[649]|Aggregations:0| SELECT Person_Case_Safe_ID__c , Renewal_Opp__c FROM Opportunity WHERE  (isDeleted = false AND type = 'Renewal' AND proposed_start_date__c > TODAY AND stagename NOT IN  ('Renewal Declined' , 'Renewal Converted to Non-Paying' , 'Invoice Cancelled' , 'Renewal Cancelled' , 'Renewal Cancelled Mid-Term')) AND Renewal_Opp__c IN :scope  ORDER BY proposed_start_date__c ASC NULLS LAST LIMIT 2
+13:45:43.465 (1537647490)|SOQL_EXECUTE_END|[649]|Rows:0
+13:45:43.465 (1557444998)|SOQL_EXECUTE_BEGIN|[649]|Aggregations:0| SELECT Opp_Count__c , Person__c FROM Opportunity WHERE  (isDeleted = false AND type = 'Renewal' AND membership_status__c = 'Won') AND Person__c IN :scope  ORDER BY Id DESC NULLS LAST LIMIT :qLimit
+13:45:43.465 (1566554074)|SOQL_EXECUTE_END|[649]|Rows:0
+13:45:43.465 (1586541343)|SOQL_EXECUTE_BEGIN|[649]|Aggregations:0| SELECT Opp_Case_Safe_ID__c , Person__c FROM Opportunity WHERE  (isDeleted = false AND is_active__c = TRUE) AND Person__c IN :scope  ORDER BY Id DESC NULLS LAST LIMIT 1
+13:45:43.465 (1599098574)|SOQL_EXECUTE_END|[649]|Rows:1
+13:45:43.465 (1619619854)|SOQL_EXECUTE_BEGIN|[649]|Aggregations:0| SELECT Proposed_Start_Date__c , Person__c FROM Opportunity WHERE  (isDeleted = false AND stagename = 'Renewal Declined') AND Person__c IN :scope  ORDER BY proposed_start_date__c DESC NULLS LAST LIMIT 1
+13:45:43.465 (1627104592)|SOQL_EXECUTE_END|[649]|Rows:0
+13:45:43.465 (1643530911)|SOQL_EXECUTE_BEGIN|[649]|Aggregations:0| SELECT StageName , Person__c FROM Opportunity WHERE  (isDeleted = false AND stagename != 'Renewal Pending' AND recordtype.name LIKE '%Membership%') AND Person__c IN :scope  ORDER BY proposed_start_date__c DESC NULLS LAST LIMIT 1
+13:45:43.465 (1652931594)|SOQL_EXECUTE_END|[649]|Rows:1
+13:45:43.465 (1669244282)|SOQL_EXECUTE_BEGIN|[649]|Aggregations:0| SELECT Proposed_Start_Date__c , Person__c FROM Opportunity WHERE  (isDeleted = false AND type = 'Renewal' AND proposed_start_date__c > TODAY AND stagename NOT IN  ('Renewal Declined' , 'Renewal Converted to Non-Paying' , 'Invoice Cancelled' , 'Renewal Cancelled' , 'Renewal Cancelled Mid-Term')) AND Person__c IN :scope  ORDER BY proposed_start_date__c ASC NULLS LAST LIMIT 2
+13:45:43.465 (1677687843)|SOQL_EXECUTE_END|[649]|Rows:1
+13:45:43.465 (1700505516)|SOQL_EXECUTE_BEGIN|[649]|Aggregations:0| SELECT Renewal_Forecast_copy__c , AccountId FROM Opportunity WHERE  (isDeleted = false AND is_active__c = TRUE) AND AccountId IN :scope  ORDER BY Id DESC NULLS LAST LIMIT 1
+13:45:43.465 (1713334258)|SOQL_EXECUTE_END|[649]|Rows:1
+13:45:43.717 (1717268544)|CUMULATIVE_LIMIT_USAGE
+13:45:43.717 (1717268544)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 3 out of 200
+  Number of query rows: 3 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 2 out of 150
+  Number of DML rows: 2 out of 10000
+  Maximum CPU time: 834 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 0
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+13:45:43.717 (1717268544)|LIMIT_USAGE_FOR_NS|rh2|
+  Number of SOQL queries: 16 out of 200
+  Number of query rows: 14 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 0
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+13:45:43.717 (1717268544)|TOTAL_EMAIL_RECIPIENTS_QUEUED|0
+13:45:43.717 (1717268544)|STATIC_VARIABLE_LIST|
+  int:BYTES:0
+  int:BYTES:0
+  char[]:DigitOnes:0
+  char[]:DigitTens:0
+  Boolean:FALSE:0
+  int:MAX_EXPONENT:0
+  double:MAX_VALUE:0
+  int:MAX_VALUE:0
+  int:MIN_EXPONENT:0
+  double:MIN_NORMAL:0
+  double:MIN_VALUE:0
+  int:MIN_VALUE:0
+  double:NEGATIVE_INFINITY:0
+  double:NaN:0
+  double:POSITIVE_INFINITY:0
+  int:SIZE:0
+  int:SIZE:0
+  Boolean:TRUE:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcParameterizedTypes:0
+  String:__sfdcParameterizedTypes:0
+  String:__sfdcProperties:0
+  String:__sfdcProperties:0
+  String:__sfdcProperties:0
+  String:__sfdcProperties:0
+  String:__sfdcProperties:0
+  String:__sfdcProperties:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  Boolean:_static_CPUtestflag:0
+  String:_static_DAILY_RECURRENCE:0
+  Double:_static_E:0
+  String:_static_FIRST_INSTANCE:0
+  String:_static_FOURTH_INSTANCE:0
+  Integer:_static_FRIDAY_BITMASK:0
+  String:_static_LAST_INSTANCE:0
+  Integer:_static_MAX_ACTIVE_SCHEDULED_JOBS:0
+  Integer:_static_MONDAY_BITMASK:0
+  String:_static_MONTHLYNth_RECURRENCE:0
+  String:_static_MONTHLY_RECURRENCE:0
+  Boolean:_static_OPPORTUNITY_AFTER_PROCESSING_COMPLETE:0
+  Boolean:_static_OPPORTUNITY_TRIGGER_EXECUTION:0
+  Double:_static_PI:0
+  Integer:_static_PRIORITY_BATCH:0
+  Integer:_static_PRIORITY_RUN_NOW:0
+  Integer:_static_PRIORITY_SCHEDULE_CLEAN:0
+  Integer:_static_PRIORITY_TRIGGER:0
+  Integer:_static_SATURDAY_BITMASK:0
+  String:_static_SECOND_INSTANCE:0
+  Integer:_static_SOQL_max_aliased_fields:0
+  Integer:_static_SUNDAY_BITMASK:0
+  String:_static_THIRD_INSTANCE:0
+  Integer:_static_THURSDAY_BITMASK:0
+  Integer:_static_TUESDAY_BITMASK:0
+  Integer:_static_WEDNESDAY_BITMASK:0
+  String:_static_WEEKDAY_RECURRENCE:0
+  String:_static_WEEKLY_RECURRENCE:0
+  String:_static_YEARLYNth_RECURRENCE:0
+  String:_static_YEARLY_RECURRENCE:0
+  Boolean:_static_addCriterionForTest:0
+  Map<String,Boolean>:_static_asyncStatus:0
+  Integer:_static_availBatchJobs:0
+  List<String>:_static_baseDevNamespaces:0
+  List<String>:_static_baseDevNamespaces:0
+  Boolean:_static_bypassScheduledJobToRunQueueJobs:0
+  Boolean:_static_bypassValidFieldCheck:0
+  Boolean:_static_checkedForStaleQueueItems:0
+  Boolean:_static_dcOrg:0
+  Map<String,Schema.SObjectType>:_static_describeMap:0
+  Boolean:_static_disableAcm:0
+  Boolean:_static_disableRealtimeForTest:0
+  Boolean:_static_enableLimitQueueItemsByModifiedUser:0
+  Boolean:_static_enableSingleParentProcessing:0
+  Boolean:_static_enableValidationHelper:0
+  Integer:_static_enqueuedJobs:0
+  Map<String,Integer>:_static_exceptionsWithCount:0
+  Boolean:_static_failMergeDML:0
+  Map<Schema.SObjectField,Schema.DescribeFieldResult>:_static_fieldDescribes:0
+  Map<String,Map<String,Schema.DescribeFieldResult>>:_static_fieldMapByObject:0
+  Map<String,Set<String>>:_static_fieldsToUpdate:0
+  Map<String,rh2.HS_Filter>:_static_filters:0
+  Map<String,List<SObject>>:_static_foreignKeyRecs:0
+  Map<String,Set<Id>>:_static_foreignKeyScope:0
+  Integer:_static_futureCalls:0
+  Map<String,Schema.SObjectType>:_static_gd:0
+  Map<String,Schema.SObjectType>:_static_gd:0
+  Set<String>:_static_invalidTriggerObjects:0
+  Boolean:_static_isApprovalProcess:0
+  Boolean:_static_isExecute:0
+  Boolean:_static_isVFRollup:0
+  Set<String>:_static_isoCodeCache:0
+  String:_static_localNamespace:0
+  Integer:_static_maxActiveBatchJobs:0
+  Integer:_static_maxActiveFuture:0
+  Integer:_static_maxActiveQueue:0
+  Integer:_static_maxBatchSize:0
+  Decimal:_static_maxCPUTime:0
+  Integer:_static_maxParentIds:0
+  Integer:_static_maxRollupsPerAsync:0
+  Boolean:_static_mcOrg:0
+  Boolean:_static_mcOrg:0
+  Boolean:_static_mcOrg:0
+  Boolean:_static_metadataConnectionWarning:0
+  Set<String>:_static_objectsWithoutIsDeleted:0
+  Map<String,Map<Id,SObject>>:_static_parentsAfterRollup:0
+  Map<String,Map<Id,SObject>>:_static_parentsBeforeUpdate:0
+  Boolean:_static_rhxInstalled:0
+  Boolean:_static_rhxPresentAndValid:0
+  List<rh2.PS_Rollup_Context>:_static_rollupsWithScope:0
+  Boolean:_static_runBatchJobOutsideScheduledContext:0
+  Boolean:_static_scopeTestFlag:0
+  Boolean:_static_testAssumeNoAPI:0
+  Boolean:_static_testAssumeProductionEnvironment:0
+  Integer:_static_testChildRecordCount:0
+  Boolean:_static_testDMLRowsBuffer:0
+  Boolean:_static_testTriggerSplitFlag:0
+  Boolean:_static_test_CancelUpperLimitForDataLoadAsync:0
+  Decimal:_static_test_DMLLimitMultiplier:0
+  Decimal:_static_test_queryRowsBufferMultiplier:0
+  Double:_static_usageOfLimits:0
+  Set<String>:_static_validStandardObject:0
+  char[]:digits:0
+  long:serialVersionUID:0
+  long:serialVersionUID:0
+  long:serialVersionUID:0
+  int[]:sizeTable:0
+
+13:45:43.717 (1717268544)|CUMULATIVE_LIMIT_USAGE_END
+
+13:45:43.465 (1718728766)|CODE_UNIT_FINISHED|RHX_Opportunity on Opportunity trigger event AfterUpdate|__sfdc_trigger/RHX_Opportunity
+13:45:43.465 (1719707047)|CODE_UNIT_STARTED|[EXTERNAL]|01q40000000CuN5|Opportunities on Opportunity trigger event AfterUpdate|__sfdc_trigger/Opportunities
+13:45:43.465 (1778515727)|SOQL_EXECUTE_BEGIN|[150]|Aggregations:0|SELECT Id, StageName, Member_Type__c, person__c, person__r.Account.Member_Status__pc, person__r.Account.RecordType.DeveloperName, person__r.Account.PersonContactId FROM Opportunity WHERE (ID IN :tmpVar1 AND person__r.Account.IsPersonAccount = TRUE)
+13:45:43.465 (1789109736)|SOQL_EXECUTE_END|[150]|Rows:1
+13:45:43.465 (1791453257)|USER_DEBUG|[110]|DEBUG|opp---Opportunity:{Id=0061W00000ogyzrQAA, StageName=Renewal Pending, Member_Type__c=Practitioner, Person__c=0034000001pfstpAAA}
+13:45:43.465 (1791495601)|USER_DEBUG|[112]|DEBUG|MemberSettings bestMatch---null
+13:45:43.465 (1797033903)|SYSTEM_MODE_ENTER|false
+13:45:43.465 (1797189897)|SYSTEM_MODE_EXIT|false
+13:45:43.465 (1797801912)|SOQL_EXECUTE_BEGIN|[144]|Aggregations:1|SELECT Id, Person__c, (SELECT Id, Role, ContactId, OpportunityId FROM OpportunityContactRoles WHERE Role = 'Person') FROM Opportunity WHERE Id = :tmpVar1
+13:45:43.465 (1804188813)|SOQL_EXECUTE_END|[144]|Rows:1
+13:45:43.465 (1805285481)|SYSTEM_MODE_ENTER|false
+13:45:43.465 (1805432242)|SYSTEM_MODE_EXIT|false
+13:45:43.465 (1805460373)|SYSTEM_MODE_ENTER|false
+13:45:43.465 (1805540961)|SYSTEM_MODE_EXIT|false
+13:45:43.465 (1806076815)|SOQL_EXECUTE_BEGIN|[69]|Aggregations:1|SELECT Id, Renewal_Opps__c, Renewal_Opp__c, (SELECT Id, Transferred_From_Type__c, CloseDate FROM Opportunities1__r ORDER BY CloseDate DESC NULLS FIRST) FROM Opportunity WHERE Id = :tmpVar1
+13:45:43.465 (1811164023)|SOQL_EXECUTE_END|[69]|Rows:1
+13:45:43.465 (1822184239)|SOQL_EXECUTE_BEGIN|[13]|Aggregations:0|SELECT Id, Proposed_Start_Date__c, Person__r.Id, Person__r.Future_Renewal_Date__c, Person__r.Future_Renewal_Opp__c FROM Opportunity WHERE (ID IN :tmpVar1 AND RecordType.DeveloperName = 'Renewal_Membership' AND IsClosed = FALSE)
+13:45:43.465 (1830445176)|SOQL_EXECUTE_END|[13]|Rows:1
+13:45:43.830 (1830892352)|CUMULATIVE_LIMIT_USAGE
+13:45:43.830 (1830892352)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 7 out of 200
+  Number of query rows: 9 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 2 out of 150
+  Number of DML rows: 2 out of 10000
+  Maximum CPU time: 834 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 0
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+13:45:43.830 (1830892352)|LIMIT_USAGE_FOR_NS|rh2|
+  Number of SOQL queries: 16 out of 200
+  Number of query rows: 14 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 0
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+13:45:43.830 (1830892352)|TOTAL_EMAIL_RECIPIENTS_QUEUED|0
+13:45:43.830 (1830892352)|STATIC_VARIABLE_LIST|
+  int:BYTES:0
+  int:BYTES:0
+  char[]:DigitOnes:0
+  char[]:DigitTens:0
+  Boolean:FALSE:0
+  int:MAX_EXPONENT:0
+  double:MAX_VALUE:0
+  int:MAX_VALUE:0
+  int:MIN_EXPONENT:0
+  double:MIN_NORMAL:0
+  double:MIN_VALUE:0
+  int:MIN_VALUE:0
+  double:NEGATIVE_INFINITY:0
+  double:NaN:0
+  double:POSITIVE_INFINITY:0
+  int:SIZE:0
+  int:SIZE:0
+  Boolean:TRUE:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcParameterizedTypes:0
+  String:__sfdcParameterizedTypes:0
+  String:__sfdcProperties:0
+  String:__sfdcProperties:0
+  String:__sfdcProperties:0
+  String:__sfdcProperties:0
+  String:__sfdcProperties:0
+  String:__sfdcProperties:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  Boolean:_static_CPUtestflag:0
+  String:_static_DAILY_RECURRENCE:0
+  Double:_static_E:0
+  String:_static_FIRST_INSTANCE:0
+  String:_static_FOURTH_INSTANCE:0
+  Integer:_static_FRIDAY_BITMASK:0
+  String:_static_LAST_INSTANCE:0
+  Integer:_static_MAX_ACTIVE_SCHEDULED_JOBS:0
+  Integer:_static_MONDAY_BITMASK:0
+  String:_static_MONTHLYNth_RECURRENCE:0
+  String:_static_MONTHLY_RECURRENCE:0
+  Boolean:_static_OPPORTUNITY_AFTER_PROCESSING_COMPLETE:0
+  Boolean:_static_OPPORTUNITY_TRIGGER_EXECUTION:0
+  Double:_static_PI:0
+  Integer:_static_PRIORITY_BATCH:0
+  Integer:_static_PRIORITY_RUN_NOW:0
+  Integer:_static_PRIORITY_SCHEDULE_CLEAN:0
+  Integer:_static_PRIORITY_TRIGGER:0
+  Integer:_static_SATURDAY_BITMASK:0
+  String:_static_SECOND_INSTANCE:0
+  Integer:_static_SOQL_max_aliased_fields:0
+  Integer:_static_SUNDAY_BITMASK:0
+  String:_static_THIRD_INSTANCE:0
+  Integer:_static_THURSDAY_BITMASK:0
+  Integer:_static_TUESDAY_BITMASK:0
+  Integer:_static_WEDNESDAY_BITMASK:0
+  String:_static_WEEKDAY_RECURRENCE:0
+  String:_static_WEEKLY_RECURRENCE:0
+  String:_static_YEARLYNth_RECURRENCE:0
+  String:_static_YEARLY_RECURRENCE:0
+  Boolean:_static_addCriterionForTest:0
+  Map<String,Boolean>:_static_asyncStatus:0
+  Integer:_static_availBatchJobs:0
+  List<String>:_static_baseDevNamespaces:0
+  List<String>:_static_baseDevNamespaces:0
+  Boolean:_static_bypassScheduledJobToRunQueueJobs:0
+  Boolean:_static_bypassValidFieldCheck:0
+  Boolean:_static_checkedForStaleQueueItems:0
+  Boolean:_static_dcOrg:0
+  Map<String,Schema.SObjectType>:_static_describeMap:0
+  Boolean:_static_disableAcm:0
+  Boolean:_static_disableRealtimeForTest:0
+  Boolean:_static_enableLimitQueueItemsByModifiedUser:0
+  Boolean:_static_enableSingleParentProcessing:0
+  Boolean:_static_enableValidationHelper:0
+  Integer:_static_enqueuedJobs:0
+  Map<String,Integer>:_static_exceptionsWithCount:0
+  Boolean:_static_failMergeDML:0
+  Map<Schema.SObjectField,Schema.DescribeFieldResult>:_static_fieldDescribes:0
+  Map<String,Map<String,Schema.DescribeFieldResult>>:_static_fieldMapByObject:0
+  Map<String,Set<String>>:_static_fieldsToUpdate:0
+  Map<String,rh2.HS_Filter>:_static_filters:0
+  Map<String,List<SObject>>:_static_foreignKeyRecs:0
+  Map<String,Set<Id>>:_static_foreignKeyScope:0
+  Integer:_static_futureCalls:0
+  Map<String,Schema.SObjectType>:_static_gd:0
+  Map<String,Schema.SObjectType>:_static_gd:0
+  Set<String>:_static_invalidTriggerObjects:0
+  Boolean:_static_isApprovalProcess:0
+  Boolean:_static_isExecute:0
+  Boolean:_static_isVFRollup:0
+  Set<String>:_static_isoCodeCache:0
+  String:_static_localNamespace:0
+  Integer:_static_maxActiveBatchJobs:0
+  Integer:_static_maxActiveFuture:0
+  Integer:_static_maxActiveQueue:0
+  Integer:_static_maxBatchSize:0
+  Decimal:_static_maxCPUTime:0
+  Integer:_static_maxParentIds:0
+  Integer:_static_maxRollupsPerAsync:0
+  Boolean:_static_mcOrg:0
+  Boolean:_static_mcOrg:0
+  Boolean:_static_mcOrg:0
+  Boolean:_static_metadataConnectionWarning:0
+  Set<String>:_static_objectsWithoutIsDeleted:0
+  Map<String,Map<Id,SObject>>:_static_parentsAfterRollup:0
+  Map<String,Map<Id,SObject>>:_static_parentsBeforeUpdate:0
+  Boolean:_static_rhxInstalled:0
+  Boolean:_static_rhxPresentAndValid:0
+  List<rh2.PS_Rollup_Context>:_static_rollupsWithScope:0
+  Boolean:_static_runBatchJobOutsideScheduledContext:0
+  Boolean:_static_scopeTestFlag:0
+  Boolean:_static_testAssumeNoAPI:0
+  Boolean:_static_testAssumeProductionEnvironment:0
+  Integer:_static_testChildRecordCount:0
+  Boolean:_static_testDMLRowsBuffer:0
+  Boolean:_static_testTriggerSplitFlag:0
+  Boolean:_static_test_CancelUpperLimitForDataLoadAsync:0
+  Decimal:_static_test_DMLLimitMultiplier:0
+  Decimal:_static_test_queryRowsBufferMultiplier:0
+  Double:_static_usageOfLimits:0
+  Set<String>:_static_validStandardObject:0
+  char[]:digits:0
+  long:serialVersionUID:0
+  long:serialVersionUID:0
+  long:serialVersionUID:0
+  int[]:sizeTable:0
+
+13:45:43.830 (1830892352)|CUMULATIVE_LIMIT_USAGE_END
+
+13:45:43.465 (1832295066)|CODE_UNIT_FINISHED|Opportunities on Opportunity trigger event AfterUpdate|__sfdc_trigger/Opportunities
+13:45:43.465 (1833105526)|CODE_UNIT_STARTED|[EXTERNAL]|01q40000000HBDL|IIT_TriggerOnOpportunity on Opportunity trigger event AfterUpdate|__sfdc_trigger/IIT_TriggerOnOpportunity
+13:45:43.465 (1833464929)|USER_DEBUG|[62]|DEBUG|i m in trigger
+13:45:43.465 (1834849085)|SOQL_EXECUTE_BEGIN|[79]|Aggregations:0|SELECT id, name FROM invoiceit_s__Product__c WHERE name = 'Co-Host Fee' LIMIT 1
+13:45:43.465 (1839827613)|SOQL_EXECUTE_END|[79]|Rows:1
+13:45:43.840 (1840282396)|CUMULATIVE_LIMIT_USAGE
+13:45:43.840 (1840282396)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 8 out of 200
+  Number of query rows: 10 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 2 out of 150
+  Number of DML rows: 2 out of 10000
+  Maximum CPU time: 834 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 0
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+13:45:43.840 (1840282396)|LIMIT_USAGE_FOR_NS|rh2|
+  Number of SOQL queries: 16 out of 200
+  Number of query rows: 14 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 0
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+13:45:43.840 (1840282396)|TOTAL_EMAIL_RECIPIENTS_QUEUED|0
+13:45:43.840 (1840282396)|STATIC_VARIABLE_LIST|
+  int:BYTES:0
+  int:BYTES:0
+  char[]:DigitOnes:0
+  char[]:DigitTens:0
+  Boolean:FALSE:0
+  int:MAX_EXPONENT:0
+  double:MAX_VALUE:0
+  int:MAX_VALUE:0
+  int:MIN_EXPONENT:0
+  double:MIN_NORMAL:0
+  double:MIN_VALUE:0
+  int:MIN_VALUE:0
+  double:NEGATIVE_INFINITY:0
+  double:NaN:0
+  double:POSITIVE_INFINITY:0
+  int:SIZE:0
+  int:SIZE:0
+  Boolean:TRUE:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcParameterizedTypes:0
+  String:__sfdcParameterizedTypes:0
+  String:__sfdcProperties:0
+  String:__sfdcProperties:0
+  String:__sfdcProperties:0
+  String:__sfdcProperties:0
+  String:__sfdcProperties:0
+  String:__sfdcProperties:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  Boolean:_static_CPUtestflag:0
+  String:_static_DAILY_RECURRENCE:0
+  Double:_static_E:0
+  String:_static_FIRST_INSTANCE:0
+  String:_static_FOURTH_INSTANCE:0
+  Integer:_static_FRIDAY_BITMASK:0
+  String:_static_LAST_INSTANCE:0
+  Integer:_static_MAX_ACTIVE_SCHEDULED_JOBS:0
+  Integer:_static_MONDAY_BITMASK:0
+  String:_static_MONTHLYNth_RECURRENCE:0
+  String:_static_MONTHLY_RECURRENCE:0
+  Boolean:_static_OPPORTUNITY_AFTER_PROCESSING_COMPLETE:0
+  Boolean:_static_OPPORTUNITY_TRIGGER_EXECUTION:0
+  Double:_static_PI:0
+  Integer:_static_PRIORITY_BATCH:0
+  Integer:_static_PRIORITY_RUN_NOW:0
+  Integer:_static_PRIORITY_SCHEDULE_CLEAN:0
+  Integer:_static_PRIORITY_TRIGGER:0
+  Integer:_static_SATURDAY_BITMASK:0
+  String:_static_SECOND_INSTANCE:0
+  Integer:_static_SOQL_max_aliased_fields:0
+  Integer:_static_SUNDAY_BITMASK:0
+  String:_static_THIRD_INSTANCE:0
+  Integer:_static_THURSDAY_BITMASK:0
+  Integer:_static_TUESDAY_BITMASK:0
+  Integer:_static_WEDNESDAY_BITMASK:0
+  String:_static_WEEKDAY_RECURRENCE:0
+  String:_static_WEEKLY_RECURRENCE:0
+  String:_static_YEARLYNth_RECURRENCE:0
+  String:_static_YEARLY_RECURRENCE:0
+  Boolean:_static_addCriterionForTest:0
+  Map<String,Boolean>:_static_asyncStatus:0
+  Integer:_static_availBatchJobs:0
+  List<String>:_static_baseDevNamespaces:0
+  List<String>:_static_baseDevNamespaces:0
+  Boolean:_static_bypassScheduledJobToRunQueueJobs:0
+  Boolean:_static_bypassValidFieldCheck:0
+  Boolean:_static_checkedForStaleQueueItems:0
+  Boolean:_static_dcOrg:0
+  Map<String,Schema.SObjectType>:_static_describeMap:0
+  Boolean:_static_disableAcm:0
+  Boolean:_static_disableRealtimeForTest:0
+  Boolean:_static_enableLimitQueueItemsByModifiedUser:0
+  Boolean:_static_enableSingleParentProcessing:0
+  Boolean:_static_enableValidationHelper:0
+  Integer:_static_enqueuedJobs:0
+  Map<String,Integer>:_static_exceptionsWithCount:0
+  Boolean:_static_failMergeDML:0
+  Map<Schema.SObjectField,Schema.DescribeFieldResult>:_static_fieldDescribes:0
+  Map<String,Map<String,Schema.DescribeFieldResult>>:_static_fieldMapByObject:0
+  Map<String,Set<String>>:_static_fieldsToUpdate:0
+  Map<String,rh2.HS_Filter>:_static_filters:0
+  Map<String,List<SObject>>:_static_foreignKeyRecs:0
+  Map<String,Set<Id>>:_static_foreignKeyScope:0
+  Integer:_static_futureCalls:0
+  Map<String,Schema.SObjectType>:_static_gd:0
+  Map<String,Schema.SObjectType>:_static_gd:0
+  Set<String>:_static_invalidTriggerObjects:0
+  Boolean:_static_isApprovalProcess:0
+  Boolean:_static_isExecute:0
+  Boolean:_static_isVFRollup:0
+  Set<String>:_static_isoCodeCache:0
+  String:_static_localNamespace:0
+  Integer:_static_maxActiveBatchJobs:0
+  Integer:_static_maxActiveFuture:0
+  Integer:_static_maxActiveQueue:0
+  Integer:_static_maxBatchSize:0
+  Decimal:_static_maxCPUTime:0
+  Integer:_static_maxParentIds:0
+  Integer:_static_maxRollupsPerAsync:0
+  Boolean:_static_mcOrg:0
+  Boolean:_static_mcOrg:0
+  Boolean:_static_mcOrg:0
+  Boolean:_static_metadataConnectionWarning:0
+  Set<String>:_static_objectsWithoutIsDeleted:0
+  Map<String,Map<Id,SObject>>:_static_parentsAfterRollup:0
+  Map<String,Map<Id,SObject>>:_static_parentsBeforeUpdate:0
+  Boolean:_static_rhxInstalled:0
+  Boolean:_static_rhxPresentAndValid:0
+  List<rh2.PS_Rollup_Context>:_static_rollupsWithScope:0
+  Boolean:_static_runBatchJobOutsideScheduledContext:0
+  Boolean:_static_scopeTestFlag:0
+  Boolean:_static_testAssumeNoAPI:0
+  Boolean:_static_testAssumeProductionEnvironment:0
+  Integer:_static_testChildRecordCount:0
+  Boolean:_static_testDMLRowsBuffer:0
+  Boolean:_static_testTriggerSplitFlag:0
+  Boolean:_static_test_CancelUpperLimitForDataLoadAsync:0
+  Decimal:_static_test_DMLLimitMultiplier:0
+  Decimal:_static_test_queryRowsBufferMultiplier:0
+  Double:_static_usageOfLimits:0
+  Set<String>:_static_validStandardObject:0
+  char[]:digits:0
+  long:serialVersionUID:0
+  long:serialVersionUID:0
+  long:serialVersionUID:0
+  int[]:sizeTable:0
+
+13:45:43.840 (1840282396)|CUMULATIVE_LIMIT_USAGE_END
+
+13:45:43.465 (1841617932)|CODE_UNIT_FINISHED|IIT_TriggerOnOpportunity on Opportunity trigger event AfterUpdate|__sfdc_trigger/IIT_TriggerOnOpportunity
+13:45:43.465 (1841827617)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:Opportunity
+13:45:43.465 (1871923445)|CODE_UNIT_STARTED|[EXTERNAL]|01q40000000CuN5|Opportunities on Opportunity trigger event BeforeUpdate|__sfdc_trigger/Opportunities
+13:45:43.465 (1873167674)|SYSTEM_MODE_ENTER|false
+13:45:43.465 (1873310637)|SYSTEM_MODE_EXIT|false
+13:45:43.465 (1873781672)|SOQL_EXECUTE_BEGIN|[69]|Aggregations:1|SELECT Id, Renewal_Opps__c, Renewal_Opp__c, (SELECT Id, Transferred_From_Type__c, CloseDate FROM Opportunities1__r ORDER BY CloseDate DESC NULLS FIRST) FROM Opportunity WHERE Id = :tmpVar1
+13:45:43.465 (1879288292)|SOQL_EXECUTE_END|[69]|Rows:1
+13:45:43.879 (1879638443)|CUMULATIVE_LIMIT_USAGE
+13:45:43.879 (1879638443)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 9 out of 200
+  Number of query rows: 11 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 2 out of 150
+  Number of DML rows: 2 out of 10000
+  Maximum CPU time: 1021 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 0
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+13:45:43.879 (1879638443)|LIMIT_USAGE_FOR_NS|rh2|
+  Number of SOQL queries: 16 out of 200
+  Number of query rows: 14 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 0
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+13:45:43.879 (1879638443)|TOTAL_EMAIL_RECIPIENTS_QUEUED|0
+13:45:43.879 (1879638443)|STATIC_VARIABLE_LIST|
+  int:BYTES:0
+  int:BYTES:0
+  char[]:DigitOnes:0
+  char[]:DigitTens:0
+  Boolean:FALSE:0
+  int:MAX_EXPONENT:0
+  double:MAX_VALUE:0
+  int:MAX_VALUE:0
+  int:MIN_EXPONENT:0
+  double:MIN_NORMAL:0
+  double:MIN_VALUE:0
+  int:MIN_VALUE:0
+  double:NEGATIVE_INFINITY:0
+  double:NaN:0
+  double:POSITIVE_INFINITY:0
+  int:SIZE:0
+  int:SIZE:0
+  Boolean:TRUE:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcParameterizedTypes:0
+  String:__sfdcParameterizedTypes:0
+  String:__sfdcProperties:0
+  String:__sfdcProperties:0
+  String:__sfdcProperties:0
+  String:__sfdcProperties:0
+  String:__sfdcProperties:0
+  String:__sfdcProperties:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  Boolean:_static_CPUtestflag:0
+  String:_static_DAILY_RECURRENCE:0
+  Double:_static_E:0
+  String:_static_FIRST_INSTANCE:0
+  String:_static_FOURTH_INSTANCE:0
+  Integer:_static_FRIDAY_BITMASK:0
+  String:_static_LAST_INSTANCE:0
+  Integer:_static_MAX_ACTIVE_SCHEDULED_JOBS:0
+  Integer:_static_MONDAY_BITMASK:0
+  String:_static_MONTHLYNth_RECURRENCE:0
+  String:_static_MONTHLY_RECURRENCE:0
+  Boolean:_static_OPPORTUNITY_AFTER_PROCESSING_COMPLETE:0
+  Boolean:_static_OPPORTUNITY_TRIGGER_EXECUTION:0
+  Double:_static_PI:0
+  Integer:_static_PRIORITY_BATCH:0
+  Integer:_static_PRIORITY_RUN_NOW:0
+  Integer:_static_PRIORITY_SCHEDULE_CLEAN:0
+  Integer:_static_PRIORITY_TRIGGER:0
+  Integer:_static_SATURDAY_BITMASK:0
+  String:_static_SECOND_INSTANCE:0
+  Integer:_static_SOQL_max_aliased_fields:0
+  Integer:_static_SUNDAY_BITMASK:0
+  String:_static_THIRD_INSTANCE:0
+  Integer:_static_THURSDAY_BITMASK:0
+  Integer:_static_TUESDAY_BITMASK:0
+  Integer:_static_WEDNESDAY_BITMASK:0
+  String:_static_WEEKDAY_RECURRENCE:0
+  String:_static_WEEKLY_RECURRENCE:0
+  String:_static_YEARLYNth_RECURRENCE:0
+  String:_static_YEARLY_RECURRENCE:0
+  Boolean:_static_addCriterionForTest:0
+  Map<String,Boolean>:_static_asyncStatus:0
+  Integer:_static_availBatchJobs:0
+  List<String>:_static_baseDevNamespaces:0
+  List<String>:_static_baseDevNamespaces:0
+  Boolean:_static_bypassScheduledJobToRunQueueJobs:0
+  Boolean:_static_bypassValidFieldCheck:0
+  Boolean:_static_checkedForStaleQueueItems:0
+  Boolean:_static_dcOrg:0
+  Map<String,Schema.SObjectType>:_static_describeMap:0
+  Boolean:_static_disableAcm:0
+  Boolean:_static_disableRealtimeForTest:0
+  Boolean:_static_enableLimitQueueItemsByModifiedUser:0
+  Boolean:_static_enableSingleParentProcessing:0
+  Boolean:_static_enableValidationHelper:0
+  Integer:_static_enqueuedJobs:0
+  Map<String,Integer>:_static_exceptionsWithCount:0
+  Boolean:_static_failMergeDML:0
+  Map<Schema.SObjectField,Schema.DescribeFieldResult>:_static_fieldDescribes:0
+  Map<String,Map<String,Schema.DescribeFieldResult>>:_static_fieldMapByObject:0
+  Map<String,Set<String>>:_static_fieldsToUpdate:0
+  Map<String,rh2.HS_Filter>:_static_filters:0
+  Map<String,List<SObject>>:_static_foreignKeyRecs:0
+  Map<String,Set<Id>>:_static_foreignKeyScope:0
+  Integer:_static_futureCalls:0
+  Map<String,Schema.SObjectType>:_static_gd:0
+  Map<String,Schema.SObjectType>:_static_gd:0
+  Set<String>:_static_invalidTriggerObjects:0
+  Boolean:_static_isApprovalProcess:0
+  Boolean:_static_isExecute:0
+  Boolean:_static_isVFRollup:0
+  Set<String>:_static_isoCodeCache:0
+  String:_static_localNamespace:0
+  Integer:_static_maxActiveBatchJobs:0
+  Integer:_static_maxActiveFuture:0
+  Integer:_static_maxActiveQueue:0
+  Integer:_static_maxBatchSize:0
+  Decimal:_static_maxCPUTime:0
+  Integer:_static_maxParentIds:0
+  Integer:_static_maxRollupsPerAsync:0
+  Boolean:_static_mcOrg:0
+  Boolean:_static_mcOrg:0
+  Boolean:_static_mcOrg:0
+  Boolean:_static_metadataConnectionWarning:0
+  Set<String>:_static_objectsWithoutIsDeleted:0
+  Map<String,Map<Id,SObject>>:_static_parentsAfterRollup:0
+  Map<String,Map<Id,SObject>>:_static_parentsBeforeUpdate:0
+  Boolean:_static_rhxInstalled:0
+  Boolean:_static_rhxPresentAndValid:0
+  List<rh2.PS_Rollup_Context>:_static_rollupsWithScope:0
+  Boolean:_static_runBatchJobOutsideScheduledContext:0
+  Boolean:_static_scopeTestFlag:0
+  Boolean:_static_testAssumeNoAPI:0
+  Boolean:_static_testAssumeProductionEnvironment:0
+  Integer:_static_testChildRecordCount:0
+  Boolean:_static_testDMLRowsBuffer:0
+  Boolean:_static_testTriggerSplitFlag:0
+  Boolean:_static_test_CancelUpperLimitForDataLoadAsync:0
+  Decimal:_static_test_DMLLimitMultiplier:0
+  Decimal:_static_test_queryRowsBufferMultiplier:0
+  Double:_static_usageOfLimits:0
+  Set<String>:_static_validStandardObject:0
+  char[]:digits:0
+  long:serialVersionUID:0
+  long:serialVersionUID:0
+  long:serialVersionUID:0
+  int[]:sizeTable:0
+
+13:45:43.879 (1879638443)|CUMULATIVE_LIMIT_USAGE_END
+
+13:45:43.465 (1881561053)|CODE_UNIT_FINISHED|Opportunities on Opportunity trigger event BeforeUpdate|__sfdc_trigger/Opportunities
+13:45:43.465 (1882625500)|CODE_UNIT_STARTED|[EXTERNAL]|01q40000000HBDL|IIT_TriggerOnOpportunity on Opportunity trigger event BeforeUpdate|__sfdc_trigger/IIT_TriggerOnOpportunity
+13:45:43.465 (1882970589)|USER_DEBUG|[29]|DEBUG|oppty.Proposed_Term__c null
+13:45:43.465 (1883017639)|USER_DEBUG|[30]|DEBUG|oppty.Proposed_Term__c null
+13:45:43.883 (1883095314)|CUMULATIVE_LIMIT_USAGE
+13:45:43.883 (1883095314)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 9 out of 200
+  Number of query rows: 11 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 2 out of 150
+  Number of DML rows: 2 out of 10000
+  Maximum CPU time: 1021 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 0
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+13:45:43.883 (1883095314)|LIMIT_USAGE_FOR_NS|rh2|
+  Number of SOQL queries: 16 out of 200
+  Number of query rows: 14 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 0
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+13:45:43.883 (1883095314)|TOTAL_EMAIL_RECIPIENTS_QUEUED|0
+13:45:43.883 (1883095314)|STATIC_VARIABLE_LIST|
+  int:BYTES:0
+  int:BYTES:0
+  char[]:DigitOnes:0
+  char[]:DigitTens:0
+  Boolean:FALSE:0
+  int:MAX_EXPONENT:0
+  double:MAX_VALUE:0
+  int:MAX_VALUE:0
+  int:MIN_EXPONENT:0
+  double:MIN_NORMAL:0
+  double:MIN_VALUE:0
+  int:MIN_VALUE:0
+  double:NEGATIVE_INFINITY:0
+  double:NaN:0
+  double:POSITIVE_INFINITY:0
+  int:SIZE:0
+  int:SIZE:0
+  Boolean:TRUE:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcParameterizedTypes:0
+  String:__sfdcParameterizedTypes:0
+  String:__sfdcProperties:0
+  String:__sfdcProperties:0
+  String:__sfdcProperties:0
+  String:__sfdcProperties:0
+  String:__sfdcProperties:0
+  String:__sfdcProperties:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  Boolean:_static_CPUtestflag:0
+  String:_static_DAILY_RECURRENCE:0
+  Double:_static_E:0
+  String:_static_FIRST_INSTANCE:0
+  String:_static_FOURTH_INSTANCE:0
+  Integer:_static_FRIDAY_BITMASK:0
+  String:_static_LAST_INSTANCE:0
+  Integer:_static_MAX_ACTIVE_SCHEDULED_JOBS:0
+  Integer:_static_MONDAY_BITMASK:0
+  String:_static_MONTHLYNth_RECURRENCE:0
+  String:_static_MONTHLY_RECURRENCE:0
+  Boolean:_static_OPPORTUNITY_AFTER_PROCESSING_COMPLETE:0
+  Boolean:_static_OPPORTUNITY_TRIGGER_EXECUTION:0
+  Double:_static_PI:0
+  Integer:_static_PRIORITY_BATCH:0
+  Integer:_static_PRIORITY_RUN_NOW:0
+  Integer:_static_PRIORITY_SCHEDULE_CLEAN:0
+  Integer:_static_PRIORITY_TRIGGER:0
+  Integer:_static_SATURDAY_BITMASK:0
+  String:_static_SECOND_INSTANCE:0
+  Integer:_static_SOQL_max_aliased_fields:0
+  Integer:_static_SUNDAY_BITMASK:0
+  String:_static_THIRD_INSTANCE:0
+  Integer:_static_THURSDAY_BITMASK:0
+  Integer:_static_TUESDAY_BITMASK:0
+  Integer:_static_WEDNESDAY_BITMASK:0
+  String:_static_WEEKDAY_RECURRENCE:0
+  String:_static_WEEKLY_RECURRENCE:0
+  String:_static_YEARLYNth_RECURRENCE:0
+  String:_static_YEARLY_RECURRENCE:0
+  Boolean:_static_addCriterionForTest:0
+  Map<String,Boolean>:_static_asyncStatus:0
+  Integer:_static_availBatchJobs:0
+  List<String>:_static_baseDevNamespaces:0
+  List<String>:_static_baseDevNamespaces:0
+  Boolean:_static_bypassScheduledJobToRunQueueJobs:0
+  Boolean:_static_bypassValidFieldCheck:0
+  Boolean:_static_checkedForStaleQueueItems:0
+  Boolean:_static_dcOrg:0
+  Map<String,Schema.SObjectType>:_static_describeMap:0
+  Boolean:_static_disableAcm:0
+  Boolean:_static_disableRealtimeForTest:0
+  Boolean:_static_enableLimitQueueItemsByModifiedUser:0
+  Boolean:_static_enableSingleParentProcessing:0
+  Boolean:_static_enableValidationHelper:0
+  Integer:_static_enqueuedJobs:0
+  Map<String,Integer>:_static_exceptionsWithCount:0
+  Boolean:_static_failMergeDML:0
+  Map<Schema.SObjectField,Schema.DescribeFieldResult>:_static_fieldDescribes:0
+  Map<String,Map<String,Schema.DescribeFieldResult>>:_static_fieldMapByObject:0
+  Map<String,Set<String>>:_static_fieldsToUpdate:0
+  Map<String,rh2.HS_Filter>:_static_filters:0
+  Map<String,List<SObject>>:_static_foreignKeyRecs:0
+  Map<String,Set<Id>>:_static_foreignKeyScope:0
+  Integer:_static_futureCalls:0
+  Map<String,Schema.SObjectType>:_static_gd:0
+  Map<String,Schema.SObjectType>:_static_gd:0
+  Set<String>:_static_invalidTriggerObjects:0
+  Boolean:_static_isApprovalProcess:0
+  Boolean:_static_isExecute:0
+  Boolean:_static_isVFRollup:0
+  Set<String>:_static_isoCodeCache:0
+  String:_static_localNamespace:0
+  Integer:_static_maxActiveBatchJobs:0
+  Integer:_static_maxActiveFuture:0
+  Integer:_static_maxActiveQueue:0
+  Integer:_static_maxBatchSize:0
+  Decimal:_static_maxCPUTime:0
+  Integer:_static_maxParentIds:0
+  Integer:_static_maxRollupsPerAsync:0
+  Boolean:_static_mcOrg:0
+  Boolean:_static_mcOrg:0
+  Boolean:_static_mcOrg:0
+  Boolean:_static_metadataConnectionWarning:0
+  Set<String>:_static_objectsWithoutIsDeleted:0
+  Map<String,Map<Id,SObject>>:_static_parentsAfterRollup:0
+  Map<String,Map<Id,SObject>>:_static_parentsBeforeUpdate:0
+  Boolean:_static_rhxInstalled:0
+  Boolean:_static_rhxPresentAndValid:0
+  List<rh2.PS_Rollup_Context>:_static_rollupsWithScope:0
+  Boolean:_static_runBatchJobOutsideScheduledContext:0
+  Boolean:_static_scopeTestFlag:0
+  Boolean:_static_testAssumeNoAPI:0
+  Boolean:_static_testAssumeProductionEnvironment:0
+  Integer:_static_testChildRecordCount:0
+  Boolean:_static_testDMLRowsBuffer:0
+  Boolean:_static_testTriggerSplitFlag:0
+  Boolean:_static_test_CancelUpperLimitForDataLoadAsync:0
+  Decimal:_static_test_DMLLimitMultiplier:0
+  Decimal:_static_test_queryRowsBufferMultiplier:0
+  Double:_static_usageOfLimits:0
+  Set<String>:_static_validStandardObject:0
+  char[]:digits:0
+  long:serialVersionUID:0
+  long:serialVersionUID:0
+  long:serialVersionUID:0
+  int[]:sizeTable:0
+
+13:45:43.883 (1883095314)|CUMULATIVE_LIMIT_USAGE_END
+
+13:45:43.465 (1884354113)|CODE_UNIT_FINISHED|IIT_TriggerOnOpportunity on Opportunity trigger event BeforeUpdate|__sfdc_trigger/IIT_TriggerOnOpportunity
+13:45:43.904 (1904238721)|CUMULATIVE_LIMIT_USAGE
+13:45:43.904 (1904238721)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 9 out of 200
+  Number of query rows: 11 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 2 out of 150
+  Number of DML rows: 2 out of 10000
+  Maximum CPU time: 1021 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 0
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+13:45:43.904 (1904238721)|LIMIT_USAGE_FOR_NS|rh2|
+  Number of SOQL queries: 16 out of 200
+  Number of query rows: 14 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 0
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+13:45:43.904 (1904238721)|CUMULATIVE_LIMIT_USAGE_END
+
+13:45:43.465 (1906884724)|CODE_UNIT_STARTED|[EXTERNAL]|01q400000004ay3|RHX_Opportunity on Opportunity trigger event AfterUpdate|__sfdc_trigger/RHX_Opportunity
+13:45:43.465 (1977358573)|SOQL_EXECUTE_BEGIN|[40]|Aggregations:0| SELECT Opportunity.Renewal_Opp_Owner__c FROM Opportunity WHERE  isDeleted = false AND Id IN :scope  LIMIT 50000
+13:45:43.465 (1982806055)|SOQL_EXECUTE_END|[40]|Rows:1
+13:45:43.465 (1984543664)|SOQL_EXECUTE_BEGIN|[40]|Aggregations:0| SELECT Contact.Total_of_Renewals__c , Contact.Current_Opp_ID__c , Contact.Membership_Declined_Date__c , Contact.Current_Opp_Stage__c , Contact.Upcoming_Renewal_Date__c FROM Contact WHERE  isDeleted = false AND Id IN :scope  LIMIT 50000
+13:45:43.465 (1999914911)|SOQL_EXECUTE_END|[40]|Rows:1
+13:45:43.465 (2001743061)|SOQL_EXECUTE_BEGIN|[40]|Aggregations:0| SELECT Account.Average_Renewal_Forecast__c FROM Account WHERE  isDeleted = false AND Id IN :scope  LIMIT 50000
+13:45:43.465 (2010634759)|SOQL_EXECUTE_END|[40]|Rows:1
+13:45:43.465 (2025216427)|SOQL_EXECUTE_BEGIN|[649]|Aggregations:0| SELECT Person_Case_Safe_ID__c , Renewal_Opp__c FROM Opportunity WHERE  (isDeleted = false AND type = 'Renewal' AND proposed_start_date__c > TODAY AND stagename NOT IN  ('Renewal Declined' , 'Renewal Converted to Non-Paying' , 'Invoice Cancelled' , 'Renewal Cancelled' , 'Renewal Cancelled Mid-Term')) AND Renewal_Opp__c IN :scope  ORDER BY proposed_start_date__c ASC NULLS LAST LIMIT 2
+13:45:43.465 (2034718952)|SOQL_EXECUTE_END|[649]|Rows:0
+13:45:43.465 (2048919953)|SOQL_EXECUTE_BEGIN|[649]|Aggregations:0| SELECT Opp_Count__c , Person__c FROM Opportunity WHERE  (isDeleted = false AND type = 'Renewal' AND membership_status__c = 'Won') AND Person__c IN :scope  ORDER BY Id DESC NULLS LAST LIMIT :qLimit
+13:45:43.465 (2056486984)|SOQL_EXECUTE_END|[649]|Rows:0
+13:45:43.465 (2071671791)|SOQL_EXECUTE_BEGIN|[649]|Aggregations:0| SELECT Opp_Case_Safe_ID__c , Person__c FROM Opportunity WHERE  (isDeleted = false AND is_active__c = TRUE) AND Person__c IN :scope  ORDER BY Id DESC NULLS LAST LIMIT 1
+13:45:43.465 (2082085819)|SOQL_EXECUTE_END|[649]|Rows:1
+13:45:43.465 (2096723895)|SOQL_EXECUTE_BEGIN|[649]|Aggregations:0| SELECT Proposed_Start_Date__c , Person__c FROM Opportunity WHERE  (isDeleted = false AND stagename = 'Renewal Declined') AND Person__c IN :scope  ORDER BY proposed_start_date__c DESC NULLS LAST LIMIT 1
+13:45:43.465 (2103144898)|SOQL_EXECUTE_END|[649]|Rows:0
+13:45:43.465 (2119111791)|SOQL_EXECUTE_BEGIN|[649]|Aggregations:0| SELECT StageName , Person__c FROM Opportunity WHERE  (isDeleted = false AND stagename != 'Renewal Pending' AND recordtype.name LIKE '%Membership%') AND Person__c IN :scope  ORDER BY proposed_start_date__c DESC NULLS LAST LIMIT 1
+13:45:43.465 (2127960263)|SOQL_EXECUTE_END|[649]|Rows:1
+13:45:43.465 (2143461416)|SOQL_EXECUTE_BEGIN|[649]|Aggregations:0| SELECT Proposed_Start_Date__c , Person__c FROM Opportunity WHERE  (isDeleted = false AND type = 'Renewal' AND proposed_start_date__c > TODAY AND stagename NOT IN  ('Renewal Declined' , 'Renewal Converted to Non-Paying' , 'Invoice Cancelled' , 'Renewal Cancelled' , 'Renewal Cancelled Mid-Term')) AND Person__c IN :scope  ORDER BY proposed_start_date__c ASC NULLS LAST LIMIT 2
+13:45:43.465 (2151228165)|SOQL_EXECUTE_END|[649]|Rows:1
+13:45:43.465 (2197312295)|SOQL_EXECUTE_BEGIN|[649]|Aggregations:0| SELECT Renewal_Forecast_copy__c , AccountId FROM Opportunity WHERE  (isDeleted = false AND is_active__c = TRUE) AND AccountId IN :scope  ORDER BY Id DESC NULLS LAST LIMIT 1
+13:45:43.465 (2208537039)|SOQL_EXECUTE_END|[649]|Rows:1
+13:45:44.211 (2211760184)|CUMULATIVE_LIMIT_USAGE
+13:45:44.211 (2211760184)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 9 out of 200
+  Number of query rows: 11 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 2 out of 150
+  Number of DML rows: 2 out of 10000
+  Maximum CPU time: 1265 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 0
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+13:45:44.211 (2211760184)|LIMIT_USAGE_FOR_NS|rh2|
+  Number of SOQL queries: 26 out of 200
+  Number of query rows: 21 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 0
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+13:45:44.211 (2211760184)|TOTAL_EMAIL_RECIPIENTS_QUEUED|0
+13:45:44.211 (2211760184)|STATIC_VARIABLE_LIST|
+  int:BYTES:0
+  int:BYTES:0
+  char[]:DigitOnes:0
+  char[]:DigitTens:0
+  Boolean:FALSE:0
+  int:MAX_EXPONENT:0
+  double:MAX_VALUE:0
+  int:MAX_VALUE:0
+  int:MIN_EXPONENT:0
+  double:MIN_NORMAL:0
+  double:MIN_VALUE:0
+  int:MIN_VALUE:0
+  double:NEGATIVE_INFINITY:0
+  double:NaN:0
+  double:POSITIVE_INFINITY:0
+  int:SIZE:0
+  int:SIZE:0
+  Boolean:TRUE:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcParameterizedTypes:0
+  String:__sfdcParameterizedTypes:0
+  String:__sfdcProperties:0
+  String:__sfdcProperties:0
+  String:__sfdcProperties:0
+  String:__sfdcProperties:0
+  String:__sfdcProperties:0
+  String:__sfdcProperties:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  Boolean:_static_CPUtestflag:0
+  String:_static_DAILY_RECURRENCE:0
+  Double:_static_E:0
+  String:_static_FIRST_INSTANCE:0
+  String:_static_FOURTH_INSTANCE:0
+  Integer:_static_FRIDAY_BITMASK:0
+  String:_static_LAST_INSTANCE:0
+  Integer:_static_MAX_ACTIVE_SCHEDULED_JOBS:0
+  Integer:_static_MONDAY_BITMASK:0
+  String:_static_MONTHLYNth_RECURRENCE:0
+  String:_static_MONTHLY_RECURRENCE:0
+  Boolean:_static_OPPORTUNITY_AFTER_PROCESSING_COMPLETE:0
+  Boolean:_static_OPPORTUNITY_TRIGGER_EXECUTION:0
+  Double:_static_PI:0
+  Integer:_static_PRIORITY_BATCH:0
+  Integer:_static_PRIORITY_RUN_NOW:0
+  Integer:_static_PRIORITY_SCHEDULE_CLEAN:0
+  Integer:_static_PRIORITY_TRIGGER:0
+  Integer:_static_SATURDAY_BITMASK:0
+  String:_static_SECOND_INSTANCE:0
+  Integer:_static_SOQL_max_aliased_fields:0
+  Integer:_static_SUNDAY_BITMASK:0
+  String:_static_THIRD_INSTANCE:0
+  Integer:_static_THURSDAY_BITMASK:0
+  Integer:_static_TUESDAY_BITMASK:0
+  Integer:_static_WEDNESDAY_BITMASK:0
+  String:_static_WEEKDAY_RECURRENCE:0
+  String:_static_WEEKLY_RECURRENCE:0
+  String:_static_YEARLYNth_RECURRENCE:0
+  String:_static_YEARLY_RECURRENCE:0
+  Boolean:_static_addCriterionForTest:0
+  Map<String,Boolean>:_static_asyncStatus:0
+  Integer:_static_availBatchJobs:0
+  List<String>:_static_baseDevNamespaces:0
+  List<String>:_static_baseDevNamespaces:0
+  Boolean:_static_bypassScheduledJobToRunQueueJobs:0
+  Boolean:_static_bypassValidFieldCheck:0
+  Boolean:_static_checkedForStaleQueueItems:0
+  Boolean:_static_dcOrg:0
+  Map<String,Schema.SObjectType>:_static_describeMap:0
+  Boolean:_static_disableAcm:0
+  Boolean:_static_disableRealtimeForTest:0
+  Boolean:_static_enableLimitQueueItemsByModifiedUser:0
+  Boolean:_static_enableSingleParentProcessing:0
+  Boolean:_static_enableValidationHelper:0
+  Integer:_static_enqueuedJobs:0
+  Map<String,Integer>:_static_exceptionsWithCount:0
+  Boolean:_static_failMergeDML:0
+  Map<Schema.SObjectField,Schema.DescribeFieldResult>:_static_fieldDescribes:0
+  Map<String,Map<String,Schema.DescribeFieldResult>>:_static_fieldMapByObject:0
+  Map<String,Set<String>>:_static_fieldsToUpdate:0
+  Map<String,rh2.HS_Filter>:_static_filters:0
+  Map<String,List<SObject>>:_static_foreignKeyRecs:0
+  Map<String,Set<Id>>:_static_foreignKeyScope:0
+  Integer:_static_futureCalls:0
+  Map<String,Schema.SObjectType>:_static_gd:0
+  Map<String,Schema.SObjectType>:_static_gd:0
+  Set<String>:_static_invalidTriggerObjects:0
+  Boolean:_static_isApprovalProcess:0
+  Boolean:_static_isExecute:0
+  Boolean:_static_isVFRollup:0
+  Set<String>:_static_isoCodeCache:0
+  String:_static_localNamespace:0
+  Integer:_static_maxActiveBatchJobs:0
+  Integer:_static_maxActiveFuture:0
+  Integer:_static_maxActiveQueue:0
+  Integer:_static_maxBatchSize:0
+  Decimal:_static_maxCPUTime:0
+  Integer:_static_maxParentIds:0
+  Integer:_static_maxRollupsPerAsync:0
+  Boolean:_static_mcOrg:0
+  Boolean:_static_mcOrg:0
+  Boolean:_static_mcOrg:0
+  Boolean:_static_metadataConnectionWarning:0
+  Set<String>:_static_objectsWithoutIsDeleted:0
+  Map<String,Map<Id,SObject>>:_static_parentsAfterRollup:0
+  Map<String,Map<Id,SObject>>:_static_parentsBeforeUpdate:0
+  Boolean:_static_rhxInstalled:0
+  Boolean:_static_rhxPresentAndValid:0
+  List<rh2.PS_Rollup_Context>:_static_rollupsWithScope:0
+  Boolean:_static_runBatchJobOutsideScheduledContext:0
+  Boolean:_static_scopeTestFlag:0
+  Boolean:_static_testAssumeNoAPI:0
+  Boolean:_static_testAssumeProductionEnvironment:0
+  Integer:_static_testChildRecordCount:0
+  Boolean:_static_testDMLRowsBuffer:0
+  Boolean:_static_testTriggerSplitFlag:0
+  Boolean:_static_test_CancelUpperLimitForDataLoadAsync:0
+  Decimal:_static_test_DMLLimitMultiplier:0
+  Decimal:_static_test_queryRowsBufferMultiplier:0
+  Double:_static_usageOfLimits:0
+  Set<String>:_static_validStandardObject:0
+  char[]:digits:0
+  long:serialVersionUID:0
+  long:serialVersionUID:0
+  long:serialVersionUID:0
+  int[]:sizeTable:0
+
+13:45:44.211 (2211760184)|CUMULATIVE_LIMIT_USAGE_END
+
+13:45:43.465 (2213297854)|CODE_UNIT_FINISHED|RHX_Opportunity on Opportunity trigger event AfterUpdate|__sfdc_trigger/RHX_Opportunity
+13:45:43.465 (2214061636)|CODE_UNIT_STARTED|[EXTERNAL]|01q40000000CuN5|Opportunities on Opportunity trigger event AfterUpdate|__sfdc_trigger/Opportunities
+13:45:43.465 (2224572761)|SOQL_EXECUTE_BEGIN|[150]|Aggregations:0|SELECT Id, StageName, Member_Type__c, person__c, person__r.Account.Member_Status__pc, person__r.Account.RecordType.DeveloperName, person__r.Account.PersonContactId FROM Opportunity WHERE (ID IN :tmpVar1 AND person__r.Account.IsPersonAccount = TRUE)
+13:45:43.465 (2236208281)|SOQL_EXECUTE_END|[150]|Rows:1
+13:45:43.465 (2236749953)|USER_DEBUG|[110]|DEBUG|opp---Opportunity:{Id=0061W00000ogyzrQAA, StageName=Renewal Pending, Member_Type__c=Practitioner, Person__c=0034000001pfstpAAA}
+13:45:43.465 (2236790693)|USER_DEBUG|[112]|DEBUG|MemberSettings bestMatch---null
+13:45:43.465 (2237629968)|SYSTEM_MODE_ENTER|false
+13:45:43.465 (2237797999)|SYSTEM_MODE_EXIT|false
+13:45:43.465 (2238347009)|SOQL_EXECUTE_BEGIN|[144]|Aggregations:1|SELECT Id, Person__c, (SELECT Id, Role, ContactId, OpportunityId FROM OpportunityContactRoles WHERE Role = 'Person') FROM Opportunity WHERE Id = :tmpVar1
+13:45:43.465 (2243299467)|SOQL_EXECUTE_END|[144]|Rows:1
+13:45:43.465 (2244217266)|SYSTEM_MODE_ENTER|false
+13:45:43.465 (2244388163)|SYSTEM_MODE_EXIT|false
+13:45:43.465 (2244409870)|SYSTEM_MODE_ENTER|false
+13:45:43.465 (2244523792)|SYSTEM_MODE_EXIT|false
+13:45:43.465 (2245034622)|SOQL_EXECUTE_BEGIN|[69]|Aggregations:1|SELECT Id, Renewal_Opps__c, Renewal_Opp__c, (SELECT Id, Transferred_From_Type__c, CloseDate FROM Opportunities1__r ORDER BY CloseDate DESC NULLS FIRST) FROM Opportunity WHERE Id = :tmpVar1
+13:45:43.465 (2250191276)|SOQL_EXECUTE_END|[69]|Rows:1
+13:45:43.465 (2254771620)|SOQL_EXECUTE_BEGIN|[13]|Aggregations:0|SELECT Id, Proposed_Start_Date__c, Person__r.Id, Person__r.Future_Renewal_Date__c, Person__r.Future_Renewal_Opp__c FROM Opportunity WHERE (ID IN :tmpVar1 AND RecordType.DeveloperName = 'Renewal_Membership' AND IsClosed = FALSE)
+13:45:43.465 (2260754357)|SOQL_EXECUTE_END|[13]|Rows:1
+13:45:44.260 (2260977399)|CUMULATIVE_LIMIT_USAGE
+13:45:44.260 (2260977399)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 13 out of 200
+  Number of query rows: 17 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 2 out of 150
+  Number of DML rows: 2 out of 10000
+  Maximum CPU time: 1265 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 0
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+13:45:44.260 (2260977399)|LIMIT_USAGE_FOR_NS|rh2|
+  Number of SOQL queries: 26 out of 200
+  Number of query rows: 21 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 0
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+13:45:44.260 (2260977399)|TOTAL_EMAIL_RECIPIENTS_QUEUED|0
+13:45:44.260 (2260977399)|STATIC_VARIABLE_LIST|
+  int:BYTES:0
+  int:BYTES:0
+  char[]:DigitOnes:0
+  char[]:DigitTens:0
+  Boolean:FALSE:0
+  int:MAX_EXPONENT:0
+  double:MAX_VALUE:0
+  int:MAX_VALUE:0
+  int:MIN_EXPONENT:0
+  double:MIN_NORMAL:0
+  double:MIN_VALUE:0
+  int:MIN_VALUE:0
+  double:NEGATIVE_INFINITY:0
+  double:NaN:0
+  double:POSITIVE_INFINITY:0
+  int:SIZE:0
+  int:SIZE:0
+  Boolean:TRUE:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcParameterizedTypes:0
+  String:__sfdcParameterizedTypes:0
+  String:__sfdcProperties:0
+  String:__sfdcProperties:0
+  String:__sfdcProperties:0
+  String:__sfdcProperties:0
+  String:__sfdcProperties:0
+  String:__sfdcProperties:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  Boolean:_static_CPUtestflag:0
+  String:_static_DAILY_RECURRENCE:0
+  Double:_static_E:0
+  String:_static_FIRST_INSTANCE:0
+  String:_static_FOURTH_INSTANCE:0
+  Integer:_static_FRIDAY_BITMASK:0
+  String:_static_LAST_INSTANCE:0
+  Integer:_static_MAX_ACTIVE_SCHEDULED_JOBS:0
+  Integer:_static_MONDAY_BITMASK:0
+  String:_static_MONTHLYNth_RECURRENCE:0
+  String:_static_MONTHLY_RECURRENCE:0
+  Boolean:_static_OPPORTUNITY_AFTER_PROCESSING_COMPLETE:0
+  Boolean:_static_OPPORTUNITY_TRIGGER_EXECUTION:0
+  Double:_static_PI:0
+  Integer:_static_PRIORITY_BATCH:0
+  Integer:_static_PRIORITY_RUN_NOW:0
+  Integer:_static_PRIORITY_SCHEDULE_CLEAN:0
+  Integer:_static_PRIORITY_TRIGGER:0
+  Integer:_static_SATURDAY_BITMASK:0
+  String:_static_SECOND_INSTANCE:0
+  Integer:_static_SOQL_max_aliased_fields:0
+  Integer:_static_SUNDAY_BITMASK:0
+  String:_static_THIRD_INSTANCE:0
+  Integer:_static_THURSDAY_BITMASK:0
+  Integer:_static_TUESDAY_BITMASK:0
+  Integer:_static_WEDNESDAY_BITMASK:0
+  String:_static_WEEKDAY_RECURRENCE:0
+  String:_static_WEEKLY_RECURRENCE:0
+  String:_static_YEARLYNth_RECURRENCE:0
+  String:_static_YEARLY_RECURRENCE:0
+  Boolean:_static_addCriterionForTest:0
+  Map<String,Boolean>:_static_asyncStatus:0
+  Integer:_static_availBatchJobs:0
+  List<String>:_static_baseDevNamespaces:0
+  List<String>:_static_baseDevNamespaces:0
+  Boolean:_static_bypassScheduledJobToRunQueueJobs:0
+  Boolean:_static_bypassValidFieldCheck:0
+  Boolean:_static_checkedForStaleQueueItems:0
+  Boolean:_static_dcOrg:0
+  Map<String,Schema.SObjectType>:_static_describeMap:0
+  Boolean:_static_disableAcm:0
+  Boolean:_static_disableRealtimeForTest:0
+  Boolean:_static_enableLimitQueueItemsByModifiedUser:0
+  Boolean:_static_enableSingleParentProcessing:0
+  Boolean:_static_enableValidationHelper:0
+  Integer:_static_enqueuedJobs:0
+  Map<String,Integer>:_static_exceptionsWithCount:0
+  Boolean:_static_failMergeDML:0
+  Map<Schema.SObjectField,Schema.DescribeFieldResult>:_static_fieldDescribes:0
+  Map<String,Map<String,Schema.DescribeFieldResult>>:_static_fieldMapByObject:0
+  Map<String,Set<String>>:_static_fieldsToUpdate:0
+  Map<String,rh2.HS_Filter>:_static_filters:0
+  Map<String,List<SObject>>:_static_foreignKeyRecs:0
+  Map<String,Set<Id>>:_static_foreignKeyScope:0
+  Integer:_static_futureCalls:0
+  Map<String,Schema.SObjectType>:_static_gd:0
+  Map<String,Schema.SObjectType>:_static_gd:0
+  Set<String>:_static_invalidTriggerObjects:0
+  Boolean:_static_isApprovalProcess:0
+  Boolean:_static_isExecute:0
+  Boolean:_static_isVFRollup:0
+  Set<String>:_static_isoCodeCache:0
+  String:_static_localNamespace:0
+  Integer:_static_maxActiveBatchJobs:0
+  Integer:_static_maxActiveFuture:0
+  Integer:_static_maxActiveQueue:0
+  Integer:_static_maxBatchSize:0
+  Decimal:_static_maxCPUTime:0
+  Integer:_static_maxParentIds:0
+  Integer:_static_maxRollupsPerAsync:0
+  Boolean:_static_mcOrg:0
+  Boolean:_static_mcOrg:0
+  Boolean:_static_mcOrg:0
+  Boolean:_static_metadataConnectionWarning:0
+  Set<String>:_static_objectsWithoutIsDeleted:0
+  Map<String,Map<Id,SObject>>:_static_parentsAfterRollup:0
+  Map<String,Map<Id,SObject>>:_static_parentsBeforeUpdate:0
+  Boolean:_static_rhxInstalled:0
+  Boolean:_static_rhxPresentAndValid:0
+  List<rh2.PS_Rollup_Context>:_static_rollupsWithScope:0
+  Boolean:_static_runBatchJobOutsideScheduledContext:0
+  Boolean:_static_scopeTestFlag:0
+  Boolean:_static_testAssumeNoAPI:0
+  Boolean:_static_testAssumeProductionEnvironment:0
+  Integer:_static_testChildRecordCount:0
+  Boolean:_static_testDMLRowsBuffer:0
+  Boolean:_static_testTriggerSplitFlag:0
+  Boolean:_static_test_CancelUpperLimitForDataLoadAsync:0
+  Decimal:_static_test_DMLLimitMultiplier:0
+  Decimal:_static_test_queryRowsBufferMultiplier:0
+  Double:_static_usageOfLimits:0
+  Set<String>:_static_validStandardObject:0
+  char[]:digits:0
+  long:serialVersionUID:0
+  long:serialVersionUID:0
+  long:serialVersionUID:0
+  int[]:sizeTable:0
+
+13:45:44.260 (2260977399)|CUMULATIVE_LIMIT_USAGE_END
+
+13:45:43.465 (2262486774)|CODE_UNIT_FINISHED|Opportunities on Opportunity trigger event AfterUpdate|__sfdc_trigger/Opportunities
+13:45:43.465 (2263239928)|CODE_UNIT_STARTED|[EXTERNAL]|01q40000000HBDL|IIT_TriggerOnOpportunity on Opportunity trigger event AfterUpdate|__sfdc_trigger/IIT_TriggerOnOpportunity
+13:45:43.465 (2263453658)|USER_DEBUG|[62]|DEBUG|i m in trigger
+13:45:43.465 (2263723914)|SOQL_EXECUTE_BEGIN|[79]|Aggregations:0|SELECT id, name FROM invoiceit_s__Product__c WHERE name = 'Co-Host Fee' LIMIT 1
+13:45:43.465 (2267162491)|SOQL_EXECUTE_END|[79]|Rows:1
+13:45:44.267 (2267416521)|CUMULATIVE_LIMIT_USAGE
+13:45:44.267 (2267416521)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 14 out of 200
+  Number of query rows: 18 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 2 out of 150
+  Number of DML rows: 2 out of 10000
+  Maximum CPU time: 1265 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 0
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+13:45:44.267 (2267416521)|LIMIT_USAGE_FOR_NS|rh2|
+  Number of SOQL queries: 26 out of 200
+  Number of query rows: 21 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 0
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+13:45:44.267 (2267416521)|TOTAL_EMAIL_RECIPIENTS_QUEUED|0
+13:45:44.267 (2267416521)|STATIC_VARIABLE_LIST|
+  int:BYTES:0
+  int:BYTES:0
+  char[]:DigitOnes:0
+  char[]:DigitTens:0
+  Boolean:FALSE:0
+  int:MAX_EXPONENT:0
+  double:MAX_VALUE:0
+  int:MAX_VALUE:0
+  int:MIN_EXPONENT:0
+  double:MIN_NORMAL:0
+  double:MIN_VALUE:0
+  int:MIN_VALUE:0
+  double:NEGATIVE_INFINITY:0
+  double:NaN:0
+  double:POSITIVE_INFINITY:0
+  int:SIZE:0
+  int:SIZE:0
+  Boolean:TRUE:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcInnerTypes:0
+  String:__sfdcParameterizedTypes:0
+  String:__sfdcParameterizedTypes:0
+  String:__sfdcProperties:0
+  String:__sfdcProperties:0
+  String:__sfdcProperties:0
+  String:__sfdcProperties:0
+  String:__sfdcProperties:0
+  String:__sfdcProperties:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcAdditionalCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  String:_sfdcSuppressedCodeLocations:0
+  Boolean:_static_CPUtestflag:0
+  String:_static_DAILY_RECURRENCE:0
+  Double:_static_E:0
+  String:_static_FIRST_INSTANCE:0
+  String:_static_FOURTH_INSTANCE:0
+  Integer:_static_FRIDAY_BITMASK:0
+  String:_static_LAST_INSTANCE:0
+  Integer:_static_MAX_ACTIVE_SCHEDULED_JOBS:0
+  Integer:_static_MONDAY_BITMASK:0
+  String:_static_MONTHLYNth_RECURRENCE:0
+  String:_static_MONTHLY_RECURRENCE:0
+  Boolean:_static_OPPORTUNITY_AFTER_PROCESSING_COMPLETE:0
+  Boolean:_static_OPPORTUNITY_TRIGGER_EXECUTION:0
+  Double:_static_PI:0
+  Integer:_static_PRIORITY_BATCH:0
+  Integer:_static_PRIORITY_RUN_NOW:0
+  Integer:_static_PRIORITY_SCHEDULE_CLEAN:0
+  Integer:_static_PRIORITY_TRIGGER:0
+  Integer:_static_SATURDAY_BITMASK:0
+  String:_static_SECOND_INSTANCE:0
+  Integer:_static_SOQL_max_aliased_fields:0
+  Integer:_static_SUNDAY_BITMASK:0
+  String:_static_THIRD_INSTANCE:0
+  Integer:_static_THURSDAY_BITMASK:0
+  Integer:_static_TUESDAY_BITMASK:0
+  Integer:_static_WEDNESDAY_BITMASK:0
+  String:_static_WEEKDAY_RECURRENCE:0
+  String:_static_WEEKLY_RECURRENCE:0
+  String:_static_YEARLYNth_RECURRENCE:0
+  String:_static_YEARLY_RECURRENCE:0
+  Boolean:_static_addCriterionForTest:0
+  Map<String,Boolean>:_static_asyncStatus:0
+  Integer:_static_availBatchJobs:0
+  List<String>:_static_baseDevNamespaces:0
+  List<String>:_static_baseDevNamespaces:0
+  Boolean:_static_bypassScheduledJobToRunQueueJobs:0
+  Boolean:_static_bypassValidFieldCheck:0
+  Boolean:_static_checkedForStaleQueueItems:0
+  Boolean:_static_dcOrg:0
+  Map<String,Schema.SObjectType>:_static_describeMap:0
+  Boolean:_static_disableAcm:0
+  Boolean:_static_disableRealtimeForTest:0
+  Boolean:_static_enableLimitQueueItemsByModifiedUser:0
+  Boolean:_static_enableSingleParentProcessing:0
+  Boolean:_static_enableValidationHelper:0
+  Integer:_static_enqueuedJobs:0
+  Map<String,Integer>:_static_exceptionsWithCount:0
+  Boolean:_static_failMergeDML:0
+  Map<Schema.SObjectField,Schema.DescribeFieldResult>:_static_fieldDescribes:0
+  Map<String,Map<String,Schema.DescribeFieldResult>>:_static_fieldMapByObject:0
+  Map<String,Set<String>>:_static_fieldsToUpdate:0
+  Map<String,rh2.HS_Filter>:_static_filters:0
+  Map<String,List<SObject>>:_static_foreignKeyRecs:0
+  Map<String,Set<Id>>:_static_foreignKeyScope:0
+  Integer:_static_futureCalls:0
+  Map<String,Schema.SObjectType>:_static_gd:0
+  Map<String,Schema.SObjectType>:_static_gd:0
+  Set<String>:_static_invalidTriggerObjects:0
+  Boolean:_static_isApprovalProcess:0
+  Boolean:_static_isExecute:0
+  Boolean:_static_isVFRollup:0
+  Set<String>:_static_isoCodeCache:0
+  String:_static_localNamespace:0
+  Integer:_static_maxActiveBatchJobs:0
+  Integer:_static_maxActiveFuture:0
+  Integer:_static_maxActiveQueue:0
+  Integer:_static_maxBatchSize:0
+  Decimal:_static_maxCPUTime:0
+  Integer:_static_maxParentIds:0
+  Integer:_static_maxRollupsPerAsync:0
+  Boolean:_static_mcOrg:0
+  Boolean:_static_mcOrg:0
+  Boolean:_static_mcOrg:0
+  Boolean:_static_metadataConnectionWarning:0
+  Set<String>:_static_objectsWithoutIsDeleted:0
+  Map<String,Map<Id,SObject>>:_static_parentsAfterRollup:0
+  Map<String,Map<Id,SObject>>:_static_parentsBeforeUpdate:0
+  Boolean:_static_rhxInstalled:0
+  Boolean:_static_rhxPresentAndValid:0
+  List<rh2.PS_Rollup_Context>:_static_rollupsWithScope:0
+  Boolean:_static_runBatchJobOutsideScheduledContext:0
+  Boolean:_static_scopeTestFlag:0
+  Boolean:_static_testAssumeNoAPI:0
+  Boolean:_static_testAssumeProductionEnvironment:0
+  Integer:_static_testChildRecordCount:0
+  Boolean:_static_testDMLRowsBuffer:0
+  Boolean:_static_testTriggerSplitFlag:0
+  Boolean:_static_test_CancelUpperLimitForDataLoadAsync:0
+  Decimal:_static_test_DMLLimitMultiplier:0
+  Decimal:_static_test_queryRowsBufferMultiplier:0
+  Double:_static_usageOfLimits:0
+  Set<String>:_static_validStandardObject:0
+  char[]:digits:0
+  long:serialVersionUID:0
+  long:serialVersionUID:0
+  long:serialVersionUID:0
+  int[]:sizeTable:0
+
+13:45:44.267 (2267416521)|CUMULATIVE_LIMIT_USAGE_END
+
+13:45:43.465 (2268711797)|CODE_UNIT_FINISHED|IIT_TriggerOnOpportunity on Opportunity trigger event AfterUpdate|__sfdc_trigger/IIT_TriggerOnOpportunity
+13:45:43.465 (2283636034)|CODE_UNIT_FINISHED|Workflow:Opportunity
+13:45:43.465 (2294882010)|DML_END|[133]
+13:45:43.465 (2295131444)|CODE_UNIT_FINISHED|BCH_IIT_ControllerEditProducts
+13:45:43.465 (2295994045)|EXECUTION_FINISHED
+13:45:44.296 (2296809918)|CUMULATIVE_PROFILING_BEGIN
+13:45:44.296 (2296809918)|CUMULATIVE_PROFILING|SOQL operations|
+Class.rh2.AggregateFunctionHelper.queryForChildRecords: line 649, column 1: com.salesforce.api.Database.query(String): executed 14 times in 145 ms
+Class.rh2.Describe_Helper_Default.query: line 40, column 1: com.salesforce.api.Database.query(String): executed 10 times in 84 ms
+Class.UpdateOnStage.queryFilterOpps: line 150, column 1: [SELECT Id, StageName, Member_Type__c, person__c, person__r.Account.Member_Status__pc,
+             person__r.Account.RecordType.DeveloperName, person__r.Account.PersonContactId
+             FROM Opportunity
+             WHERE (ID IN :opps
+                    AND person__r.Account.IsPersonAccount = true)]: executed 2 times in 81 ms
+Class.PersonFutureUpdate.updatePersonAccount: line 13, column 1: [SELECT Id, Proposed_Start_Date__c, Person__r.Id,
+             Person__r.Future_Renewal_Date__c, Person__r.Future_Renewal_Opp__c
+             FROM Opportunity
+             WHERE (ID in :original AND
+                    RecordType.DeveloperName = 'Renewal_Membership' AND
+                    IsClosed = false)]: executed 2 times in 24 ms
+Class.RenewalOpportunities.getOppsWithRenewals: line 69, column 1: [SELECT Id, Renewal_Opps__c, Renewal_Opp__c,
+             (SELECT Id, Transferred_From_Type__c, CloseDate
+              FROM Opportunities1__r
+              ORDER BY CloseDate DESC)
+             FROM Opportunity
+             WHERE Id in :oppIds]: executed 4 times in 24 ms
+Class.IIT_ControllerEditProductsBatchHelper.<init>: line 16, column 1: [SELECT Discount_Reason__c,invoiceit_crmx__Accounting_Code__c,invoiceit_crmx__Charge_Code__c,invoiceit_crmx__Committed_Quantity__c,invoiceit_crmx__Cost_Price__c,invoiceit_crmx__Cost__c,invoiceit_crmx__CurrencyL__c,invoiceit_crmx__Discount_Percent__c,invoiceit_crmx__Discount_Type__c,invoiceit_crmx__Discount_Value__c,invoiceit_crmx__Is_Product_Editable__c,invoiceit_crmx__Max_Customer_Spend__c,invoiceit_crmx__Min_Customer_Spend__c,invoiceit_crmx__Net_Total__c,invoiceit_crmx__Opportunity_Rate_Plan__c,invoiceit_crmx__Opportunity__c,invoiceit_crmx__Percentage_of_other_Charges__c,invoiceit_crmx__Price_Format__c,invoiceit_crmx__Price_Type__c,invoiceit_crmx__Price__c,invoiceit_crmx__Product_Bundle_Line__c,invoiceit_crmx__Product_Charge_Category__c,invoiceit_crmx__Product_Rate_Plan_Charge__c,invoiceit_crmx__Profit__c,invoiceit_crmx__Quantity__c,invoiceit_crmx__Row_Total__c,invoiceit_crmx__Sequence_No__c,invoiceit_crmx__Status__c,invoiceit_crmx__Tax_Code__c,invoiceit_crmx__Tax_Percentage__c,invoiceit_crmx__Tax__c,invoiceit_crmx__Unit_Of_Measurement__c,invoiceit_crmx__Unit_Price__c,invoiceit_crmx__VAT_Percentage__c,invoiceit_crmx__VAT__c,IsDeleted,Name,Type__c 
+                      ,invoiceit_crmx__Opportunity_Rate_Plan__r.invoiceit_crmx__Opportunity_Product__r.Name,
+                      invoiceit_crmx__Opportunity_Rate_Plan__r.invoiceit_crmx__Opportunity_Product__r.invoiceit_crmx__Description__c
+                      ,invoiceit_crmx__CurrencyL__r.invoiceit_s__Currency_Symbol__c
+                      ,invoiceit_crmx__Product_Rate_Plan_Charge__r.invoiceit_s__Unit_Price__c,Notes__c,Granted_By_User__c
+                      FROM invoiceit_crmx__Opportunity_Rate_Plan_Charge__c
+                      WHERE invoiceit_crmx__Opportunity_Rate_Plan__r.invoiceit_crmx__Opportunity_Product__r.invoiceit_crmx__Opportunity__c =: oppty.Id]: executed 2 times in 22 ms
+Class.rh2.PS_Rollup_Helper.getConditionStatements: line 632, column 1: [SELECT Name, JSON__c, XRef__c, Condition__c, Field__c, Logic__c
+                                                FROM Filter__c
+                                                WHERE Name IN :xrefs]: executed 13 times in 14 ms
+Class.ContactRoleSync.queryOpps: line 144, column 1: [SELECT Id, Person__c,
+					(SELECT Id, Role, ContactId, OpportunityId
+					 FROM OpportunityContactRoles
+					 WHERE Role = 'Person')
+				FROM Opportunity
+				WHERE Id IN :ids]: executed 2 times in 12 ms
+Class.IIT_ClassafterOnOpportunity.handleAfterOnOpportunity: line 79, column 1: [select id,name from invoiceit_s__Product__c where name = 'Co-Host Fee' limit 1]: executed 2 times in 11 ms
+Class.rh2.Describe_Utility: line 11, column 1: [SELECT NamespacePrefix FROM Organization]: executed 1 time in 8 ms
+Class.IIT_ControllerEditProductsBatchHelper.<init>: line 12, column 1: [SELECT invoiceit_crmx__Sub_Total__c, invoiceit_crmx__Total__c
+                 FROM Opportunity
+                 WHERE Id =: o.Id]: executed 2 times in 6 ms
+
+13:45:44.296 (2296809918)|CUMULATIVE_PROFILING|No profiling information for SOSL operations
+13:45:44.296 (2296809918)|CUMULATIVE_PROFILING|DML operations|
+Class.PersonFutureUpdate.updatePersonAccount: line 34, column 1: Update: List<Contact>: executed 2 times in 1 ms
+Class.UpdateOnStage.updatePersonAccounts: line 135, column 1: com.salesforce.api.Database.update(List<Account>, Boolean): executed 2 times in 1 ms
+Class.ContactRoleSync.onUpdate: line 64, column 1: Delete: List<OpportunityContactRole>: executed 2 times in 0 ms
+Class.ContactRoleSync.onUpdate: line 65, column 1: Upsert: List<OpportunityContactRole>: executed 2 times in 0 ms
+Class.UpdateOnStage.updatePersonAccounts: line 143, column 1: Insert: List<Error__c>: executed 2 times in 0 ms
+Class.RenewalOpportunities.updateRelatedRenewalOpportunity: line 48, column 1: Update: List<Opportunity>: executed 2 times in 0 ms
+
+13:45:44.296 (2296809918)|CUMULATIVE_PROFILING|method invocations|
+External entry point: global void execute(Database.BatchableContext, List<Opportunity>): executed 1 time in 2294 ms
+Class.BCH_IIT_ControllerEditProducts.execute: line 52, column 1: public System.PageReference saveCharges(): executed 1 time in 2218 ms
+Class.IIT_ControllerEditProductsBatchHelper.saveCharges: line 133, column 1: public Opportunity __sfdc_oppty(): executed 2 times in 2156 ms
+Trigger.RHX_Opportunity: line 7, column 1: global public List<String>(): executed 4 times in 1713 ms
+External entry point: public void invoke(): executed 1 time in 304 ms
+Trigger.Opportunities: line 40, column 1: public void onUpdate(List<Opportunity>, List<Opportunity>): executed 2 times in 84 ms
+Class.UpdateOnStage.onUpdate: line 37, column 1: private List<Opportunity> queryFilterOpps(List<Opportunity>): executed 4 times in 84 ms
+Class.IIT_ControllerEditProductsBatchHelper.saveCharges: line 131, column 1: public List<invoiceit_crmx__Opportunity_Rate_Plan_Charge__c> __sfdc_oppCharges(): executed 2 times in 61 ms
+External entry point: public void invoke(): executed 1 time in 47 ms
+Class.BCH_IIT_ControllerEditProducts.execute: line 50, column 1: public IIT_ControllerEditProductsBatchHelper(Opportunity): executed 1 time in 28 ms
+Trigger.Opportunities: line 62, column 1: public void updatePersonAccount(List<Opportunity>): executed 2 times in 26 ms
+
+13:45:44.296 (2296809918)|CUMULATIVE_PROFILING_END

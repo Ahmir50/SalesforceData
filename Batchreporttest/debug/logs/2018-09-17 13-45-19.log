@@ -1,0 +1,34 @@
+43.0 APEX_CODE,DEBUG;APEX_PROFILING,FINEST;CALLOUT,INFO;DB,FINEST;NBA,NONE;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,FINER;WAVE,NONE;WORKFLOW,ERROR
+13:45:20.0 (312131)|EXECUTION_STARTED
+13:45:20.0 (335854)|CODE_UNIT_STARTED|[EXTERNAL]|VisualForce View State
+13:45:20.0 (4986854)|CODE_UNIT_FINISHED|VisualForce View State
+13:45:20.0 (6192665)|EXECUTION_FINISHED
+13:45:20.9 (9125370)|VF_EVALUATE_FORMULA_BEGIN||#{(canCreate && !isHierarchyType)}
+13:45:20.9 (9194894)|VF_EVALUATE_FORMULA_END
+13:45:20.9 (9751421)|VF_EVALUATE_FORMULA_BEGIN||#{(canCreate && !isHierarchyType)}
+13:45:20.9 (9797911)|VF_EVALUATE_FORMULA_END
+13:45:20.9 (10314061)|SYSTEM_MODE_ENTER|false
+13:45:20.41 (41165278)|CUMULATIVE_LIMIT_USAGE
+13:45:20.41 (41165278)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+13:45:20.41 (41165278)|TOTAL_EMAIL_RECIPIENTS_QUEUED|0
+13:45:20.41 (41165278)|CUMULATIVE_LIMIT_USAGE_END
+
+13:45:20.43 (43853356)|CUMULATIVE_PROFILING_BEGIN
+13:45:20.43 (43853356)|CUMULATIVE_PROFILING|No profiling information for SOQL operations
+13:45:20.43 (43853356)|CUMULATIVE_PROFILING|No profiling information for SOSL operations
+13:45:20.43 (43853356)|CUMULATIVE_PROFILING|No profiling information for DML operations
+13:45:20.43 (43853356)|CUMULATIVE_PROFILING|No profiling information for method invocations
+13:45:20.43 (43853356)|CUMULATIVE_PROFILING_END

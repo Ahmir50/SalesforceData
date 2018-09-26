@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>BCH_IIT_ControllerEditProducts</members>
+        <members>BCH_IIT_ControllerEditProductsTest</members>
+        <members>BatchReport</members>
+        <members>batchreporttestclass</members>
+        <name>ApexClass</name>
+    </types>
+    <version>36.0</version>
+</Package>
